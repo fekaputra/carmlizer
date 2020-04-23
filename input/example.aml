@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<CAEXFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" FileName="example.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd">	
+	<InstanceHierarchy Name="MyInstanceHierarchy">
+		<Version>1.0.0</Version>
+		<InternalElement ID="72116902-a9a7-45ae-922f-cf55a889b5b6" Name="Line1">
+			<InternalElement ID="800744ef-73e7-4dbf-b2b4-e7e5adccb0a5" Name="Cell1">
+				<ExternalInterface ID="5e91074b-f1cc-4cdc-be64-954179e0f0e6" Name="PowerSupply" RefBaseClassPath="InterfaceClassLib1/IPowerSupply"/>
+				<InternalElement ID="3f95dbda-b311-47b4-b221-4f24b0e4243b" Name="MyRobot_instance_1" RefBaseSystemUnitPath="SystemUnitClassLib1/MyRobot">
+					<InternalElement ID="622d0d8d-7e19-423b-a482-eb9242a290c4" Name="Hand">
+						<InternalElement ID="227e0d28-bcde-4a42-a7cd-c68917c453e6" Name="Sensor"/>
+						<InternalLink Name="InternalLink1"/>
+					</InternalElement>
+					<InternalElement ID="055b7d31-3edd-4f65-983d-d74b034c355b" Name="Arm"/>
+					<InternalLink Name="InternalLink1"/>
+					<RoleRequirements RefBaseRoleClassPath="RoleClassLib1/GenericRobot"/>
+				</InternalElement>
+				<InternalElement ID="c8943fc9-7081-4154-b13b-4462e1ba57ec" Name="MyRobot_instance_2" RefBaseSystemUnitPath="SystemUnitClassLib1/MyRobot">
+					<InternalElement ID="9a558731-5272-4448-8ab5-b881cda910d6" Name="Hand">
+						<InternalElement ID="92fa0738-3136-427c-be43-774dafb9d5a8" Name="Sensor"/>
+					</InternalElement>
+					<InternalElement ID="0bffe72e-b54b-4173-886b-4e31baeb3959" Name="Arm"/>
+					<RoleRequirements RefBaseRoleClassPath="RoleClassLib1/GenericRobot"/>
+				</InternalElement>
+			</InternalElement>
+		</InternalElement>
+	</InstanceHierarchy>
+	<InterfaceClassLib Name="InterfaceClassLib1">
+		<Version>1.0.0</Version>
+		<InterfaceClass Name="IPowerSupply"/>
+	</InterfaceClassLib>
+	<RoleClassLib Name="RoleClassLib1">
+		<Version>1.0.0</Version>
+		<RoleClass Name="GenericRobot"/>
+	</RoleClassLib>
+	<SystemUnitClassLib Name="SystemUnitClassLib1">
+		<Version>1.0.0</Version>
+		<SystemUnitClass Name="MyRobot">
+			<InternalElement ID="ca730241-2340-4faf-8e36-d7e9d5327d75" Name="Hand">
+				<InternalElement ID="f3c8b5aa-bfec-4d43-b4f7-5797ced7d9e5" Name="Sensor"/>
+			</InternalElement>
+			<InternalElement ID="de5b7bb0-eb5c-4ea5-8e04-bd6ef4bd9f6f" Name="Arm"/>
+			<SupportedRoleClass RefRoleClassPath="RoleClassLib1/GenericRobot"/>
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+</CAEXFile>
+	

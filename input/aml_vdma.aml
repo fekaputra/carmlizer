@@ -1,0 +1,2190 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+    <CAEXFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" FileName="VDMA66415_AMLImplementation_150528.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd">
+	<InstanceHierarchy Name="ExampleInstanceHierarchy1">
+		<Version>1.0.0</Version>
+		<InternalElement ID="c78e2bf0-d6c5-4abd-b6f6-99b014083f92" Name="InstanceOfFile" RefBaseSystemUnitPath="VDMASystemUnitClassLib/File">
+			<Attribute AttributeDataType="xs:string" Name="Version">
+				<Description>Version der Dateiformat-Definition VDMA66415</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="FileName">
+				<Description>Name der Projekt-Datei</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="FileVersion">
+				<Description>Version der Projektdatei</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:dateTime" Name="FileTime">
+				<Description>Zeitpunkt des Schreibens (Speicherns) der Projektdatei</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="FileAuthor">
+				<Description>Eindeutiges Autorenkürzel des Bearbeiters der Projektdatei</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="FileInfo">
+				<Description>Informationstext zur Projektdatei</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:dateTime" Name="FilePriorTime">
+				<Description>Zeitpunkt des Schreibens (Speicherns) der Vorgängerprojektdatei, welche angereichert oder gelesen wurde</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="FilePriorAuther">
+				<Description>Eindeutiges Autorenkürzel des Bearbeiters der Vorgängerprojektdatei, welche angereichert oder gelesen wurde</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="FilePriorInfo">
+				<Description>Informationstext der Vorgängerprojektdatei, welche angereichert oder gelesen wurde</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:language" Name="UsedLanguages">
+				<Description>Aufzählung aller in der Projektdatei verwendeten Sprachen</Description>
+				<DefaultValue>de, en</DefaultValue>
+			</Attribute>
+			<InternalElement ID="a7b7ec51-f0de-409d-abf7-ce40ddd8c046" Name="InstanceOfProject" RefBaseSystemUnitPath="VDMASystemUnitClassLib/Project">
+				<Attribute AttributeDataType="xs:string" Name="ProjectManufacturer">
+					<Description>Projekthersteller ((Maschinenhersteller)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ProjectName">
+					<Description>Name des Projektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ProjectSign">
+					<Description>Kennzeichen / Nummer des Projektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ProjectRevision">
+					<Description>Revisionsnummer des Projektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ProjectInformation">
+					<Description>Informationstext zum Projekt</Description>
+				</Attribute>
+				<InternalElement ID="64062729-4bfb-4c57-9a5e-9006159962c7" Name="InstanceOfSubProject" RefBaseSystemUnitPath="VDMASystemUnitClassLib/SubProject">
+					<Attribute AttributeDataType="xs:string" Name="SubProjectName">
+						<Description>Name des Unterprojektes</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="SubProjectSign">
+						<Description>Kennzeichen / Nummer des Unterprojektes</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="SubProjectRevision">
+						<Description>Revisionsnummer des Unterprojektes</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="SubProjectInformation">
+						<Description>Informationstext zum Unterprojekt</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ToolID">
+						<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+						<Attribute AttributeDataType="xs:string" Name="ToolName">
+							<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="ToolSign">
+							<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+							<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+						</Attribute>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="DataRevision">
+						<Description>Änderungskennzeichen für das Datenobjekt</Description>
+						<Attribute AttributeDataType="xs:string" Name="LastChange">
+							<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="Status">
+							<Description>Status des Bearbeitung des Datenobjektes</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:dateTime" Name="Time">
+							<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="Author">
+							<Description>Autorenkürzel des letzten Bearbeiters</Description>
+						</Attribute>
+					</Attribute>
+					<InternalElement ID="01992c35-2caf-4efd-ace2-8146f13ef28d" Name="InstanceOfUnit" RefBaseSystemUnitPath="VDMASystemUnitClassLib/Unit">
+						<Attribute AttributeDataType="xs:string" Name="Identifier"/>
+						<Attribute AttributeDataType="xs:string" Name="UnitSign"/>
+						<Attribute AttributeDataType="xs:string" Name="UnitName"/>
+						<Attribute AttributeDataType="xs:string" Name="UnitUserDefinedText">
+							<Description>Information des Anwenders zur Einheit</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="UnitParameterUser">
+							<Description>Anwendungsspezifischer Parameter der Einheit</Description>
+							<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+								<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ParamterName">
+								<Description>Name des Parameters</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+								<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+								<Description>Wert des Parameters</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+								<Description>Datentyp des Parameters</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+								<Description>SI Einheit des Parameters</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+								<Description>Beschreibung des Parameters</Description>
+							</Attribute>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="UnitSequence">
+							<Description>Ablaufbeschreibung, die der Einheit zugeordnet ist</Description>
+							<Attribute AttributeDataType="xs:string" Name="SequenceName">
+								<Description>Name der Sequenz</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="SequenceStep">
+								<Description>Schritt der Sequenz</Description>
+								<Attribute AttributeDataType="xs:string" Name="StepName">
+									<Description>Name des Schrittes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="StepNext">
+									<Description>Namen aller nachfolgenden Schritte</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="StepParameter">
+									<Description>Anwendungsspezifische Parameter des Schrittes</Description>
+								</Attribute>
+							</Attribute>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="ToolID">
+							<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+							<Attribute AttributeDataType="xs:string" Name="ToolName">
+								<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolSign">
+								<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+								<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+							</Attribute>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="DataRevision">
+							<Description>Änderungskennzeichen für das Datenobjekt</Description>
+							<Attribute AttributeDataType="xs:string" Name="LastChange">
+								<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="Status">
+								<Description>Status des Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:dateTime" Name="Time">
+								<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="Author">
+								<Description>Autorenkürzel des letzten Bearbeiters</Description>
+							</Attribute>
+						</Attribute>
+						<ExternalInterface ID="32650392-f53e-4d63-8294-387a209428a1" Name="UnitDrawingFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitDrawingFileName">
+							<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+						</ExternalInterface>
+						<ExternalInterface ID="e35eb59a-fd43-49ee-801f-3cd17cb2b6eb" Name="UnitDocFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitDocFileName">
+							<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+						</ExternalInterface>
+						<ExternalInterface ID="8db026fe-5e6e-4e4b-a9b9-c6f1e21a18d1" Name="UnitUserDefinedFile" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitUserDefinedFile">
+							<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+						</ExternalInterface>
+						<InternalElement ID="6e4fcdb8-6c78-4e8d-8234-b74dcf459877" Name="InstanceOfDevice" RefBaseSystemUnitPath="VDMASystemUnitClassLib/Device">
+							<Attribute AttributeDataType="xs:string" Name="Identifier">
+								<Description>Identifizierung des Gerätes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="IsSubDeviceOf">
+								<Description>Zuordnung zu einem anderen (führenden) Gerät durch Eintrag des Device.Identifiers dieses Gerätes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="SubDeviceIndex">
+								<Description>Position des Gerätes im Verhältnis zum führenden Gerät</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="DeviceManufacturer">
+								<Description>Hersteller des Gerätes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="DeviceName">
+								<Description>Name des Gerätes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="DeviceOrderNumber">
+								<Description>Bestellnummer des Gerätes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="MaterialNumber">
+								<Description>Materialnummer des Gerätes im betriebswirtschaftlichen Planungssystem des Projektherstellers</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="PartNumber">
+								<Description>Artikelnummer des Gerätes, bezeichnet einen Gerätetyp mit gewissen Merkmalen im betriebswirtschaftlichen Planungssystem des Projektherstellers</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="DeviceUserDefinedText">
+								<Description>Information des Anwenders zum Gerät</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="DeviceParameterUser">
+								<Description>Anwendungsspezifische Parameter des Gerätes</Description>
+								<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+									<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParamterName">
+									<Description>Name des Parameters</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+									<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+									<Description>Wert des Parameters</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+									<Description>Datentyp des Parameters</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+									<Description>SI Einheit des Parameters</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+									<Description>Beschreibung des Parameters</Description>
+								</Attribute>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolID">
+								<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+								<Attribute AttributeDataType="xs:string" Name="ToolName">
+									<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ToolSign">
+									<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+									<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+								</Attribute>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="DataRevision">
+								<Description>Änderungskennzeichen für das Datenobjekt</Description>
+								<Attribute AttributeDataType="xs:string" Name="LastChange">
+									<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="Status">
+									<Description>Status des Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:dateTime" Name="Time">
+									<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="Author">
+									<Description>Autorenkürzel des letzten Bearbeiters</Description>
+								</Attribute>
+							</Attribute>
+							<ExternalInterface ID="95410d59-678c-4960-ba1a-728f6324d512" Name="DeviceDataSheetFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/DeviceDataSheetFileName">
+								<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+							</ExternalInterface>
+							<ExternalInterface ID="66e86096-c4c8-472d-b910-4c03cacb0e2e" Name="DeviceDocFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/DeviceDocFileName">
+								<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+							</ExternalInterface>
+							<ExternalInterface ID="1beb3183-9d0a-4acf-a913-98a336d1434f" Name="DeviceUserDefinedFile" RefBaseClassPath="VDMA66415InterfaceClassLib/DeviceUserDefinedFile">
+								<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+							</ExternalInterface>
+							<InternalElement ID="3d700521-bfe2-4b87-b3a5-032976a62cbf" Name="InstanceOfDeviceFunction" RefBaseSystemUnitPath="VDMASystemUnitClassLib/DeviceFunction">
+								<Attribute AttributeDataType="xs:string" Name="Identifier">
+									<Description>Identifizierung der Gerätefunktion</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSign">
+									<Description>Referenzkennzeichen der Gerätefunktion, einheitlich/gemeinsam für alle Gewerke</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignM">
+									<Description>Referenzkennzeichen der Gerätefunktion: speziell Mechanik (Bauteilkennzeichen)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignBMK">
+									<Description>Referenzkennzeichen der Gerätefunktion: speziell Elektrotechnik (Betriebsmittelkennzeichen)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignFP">
+									<Description>Referenzkennzeichen der Gerätefunktion: speziell Fluidtechnik (Bezeichnungsschlüssel)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignPI">
+									<Description>Referenzkennzeichen der Gerätefunktion: speziell Prozesstechnik (Mess- und Regelstellenkennzeichen)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceFunctionText">
+									<Description>Name der Gerätefunktion (Funktionstext)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceFunctionTextShort">
+									<Description>Name der Gerätefunktion (Funktionstext) in Kurzform</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="TypeSensor">
+									<Description>Funktionstyp Sensor, Erfassen</Description>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeSensorSignal"/>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeSensorValue"/>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="TypeSensorBinary">
+									<Description>Binäres Sensor-Signal</Description>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeLogicControl"/>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeLogicCommunication"/>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="TypeSensorValue">
+									<Description>Messwert</Description>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorSignal"/>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorValue"/>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="TypeLogic">
+									<Description>Funktionstyp Logik, Auswerten</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="TypeLogicControl">
+									<Description>Steuerung</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="TypeLogicCommunication">
+									<Description>Kommunikation</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="TypeActuator">
+									<Description>Funktionstyp Aktor, Reagieren</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorBinary">
+									<Description>Binäres Aktors-Signal</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorValue">
+									<Description>Sollwert, Stellwert</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="TypeConnection">
+									<Description>Verbindung</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="TypeAccessory">
+									<Description>Zubehör</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="RelatedMechanicalDrawing">
+									<Description>Gerätefunktion relevant für Mechanik-CAD (Konstruktionszeichnung)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="RelatedElectricalDiagram">
+									<Description>Gerätefunktion relevant für Elektro-CAD (Schaltplan)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="RelatedFluidPowerDiagram">
+									<Description>Gerätefunktion relevant für Fluid-CAD (Fluidplan)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="RelatedPIDiagram">
+									<Description>Gerätefunktion relevant für Prozess-CAD (R&amp;I-Fließschema)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="RelatedSoftware">
+									<Description>Gerätefunktion relevant für Programmiersoftware</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:boolean" Name="RelatedSoftwareSafetyIO">
+									<Description>Gerätefunktion relevant für sicherheitsgerichtete Programmiersoftware</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ConnectionSource">
+									<Description>Anschlussquelle der Gerätefunktion</Description>
+									<Attribute AttributeDataType="xs:string" Name="ConnectionSign">
+										<Description>Referenzkennzeichen der Anschlussquelle</Description>
+									</Attribute>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ConnectionDestination">
+									<Description>Anschlussziel der Gerätefunktion</Description>
+									<Attribute AttributeDataType="xs:string" Name="ConnectionSign">
+										<Description>Referenzkennzeichen des Anschlusszieles</Description>
+									</Attribute>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="SafetyFunctionName">
+									<Description>Sicherheitsfunktion, in der die Gerätefunktion verwendet wird</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="SpanOfControlName">
+									<Description>Name des Maschinenbereiches, in dem die Gerätefunktion eingebunden ist (Wirkungsbereich)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceFunctionUserDefinedText">
+									<Description>Informationen des Anwenders zur Gerätefunktion</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceFunctionParameterUser">
+									<Description>Anwendungsspezifischer Parameter der Gerätefunktion</Description>
+									<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+										<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ParamterName">
+										<Description>Name des Parameters</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+										<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+										<Description>Wert des Parameters</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+										<Description>Datentyp des Parameters</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+										<Description>SI Einheit des Parameters</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+										<Description>Beschreibung des Parameters</Description>
+									</Attribute>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ToolID">
+									<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+									<Attribute AttributeDataType="xs:string" Name="ToolName">
+										<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ToolSign">
+										<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+										<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+									</Attribute>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DataRevision">
+									<Description>Änderungskennzeichen für das Datenobjekt</Description>
+									<Attribute AttributeDataType="xs:string" Name="LastChange">
+										<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="Status">
+										<Description>Status des Bearbeitung des Datenobjektes</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:dateTime" Name="Time">
+										<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="Author">
+										<Description>Autorenkürzel des letzten Bearbeiters</Description>
+									</Attribute>
+								</Attribute>
+								<ExternalInterface ID="a2a368e9-4756-408d-ae85-061a04efcaf1" Name="InstanceOfPLCTag" RefBaseClassPath="VDMA66415InterfaceClassLib/PLCTag">
+									<Attribute AttributeDataType="xs:string" Name="Identifier"/>
+									<Attribute AttributeDataType="xs:string" Name="ToolID">
+										<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+										<Attribute AttributeDataType="xs:string" Name="ToolName">
+											<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ToolSign">
+											<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+											<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+										</Attribute>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="DataRevision">
+										<Description>Änderungskennzeichen für das Datenobjekt</Description>
+										<Attribute AttributeDataType="xs:string" Name="LastChange">
+											<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="Status">
+											<Description>Status des Bearbeitung des Datenobjektes</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:dateTime" Name="Time">
+											<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="Author">
+											<Description>Autorenkürzel des letzten Bearbeiters</Description>
+										</Attribute>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="PLCManufacturer">
+										<Description>Name des Herstellers der Steuerung</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="PLCName">
+										<Description>Name der Programmiersoftware der Steuerung, inkl. Version</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="Operand">
+										<Description>Typ des Operanden (Ein-/Ausgang der Steuerung)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="Adress">
+										<Description>Adresse</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="PLCNode">
+										<Description>Identifizierung der Steuerung</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="TagName">
+										<Description>Eindeutiger Name der Variablen (Bezeichner, Sy&lt;mbol) im Steuerungsprogramm</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="TagComment">
+										<Description>Beschreibung der Variablen</Description>
+									</Attribute>
+								</ExternalInterface>
+								<ExternalInterface ID="85d78530-2abe-466b-8ad9-2b6df0669630" Name="Instance2OfPLCTag" RefBaseClassPath="VDMA66415InterfaceClassLib/PLCTag">
+									<Attribute AttributeDataType="xs:string" Name="Identifier"/>
+									<Attribute AttributeDataType="xs:string" Name="ToolID">
+										<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+										<Attribute AttributeDataType="xs:string" Name="ToolName">
+											<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ToolSign">
+											<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+											<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+										</Attribute>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="DataRevision">
+										<Description>Änderungskennzeichen für das Datenobjekt</Description>
+										<Attribute AttributeDataType="xs:string" Name="LastChange">
+											<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="Status">
+											<Description>Status des Bearbeitung des Datenobjektes</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:dateTime" Name="Time">
+											<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="Author">
+											<Description>Autorenkürzel des letzten Bearbeiters</Description>
+										</Attribute>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="PLCManufacturer">
+										<Description>Name des Herstellers der Steuerung</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="PLCName">
+										<Description>Name der Programmiersoftware der Steuerung, inkl. Version</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="Operand">
+										<Description>Typ des Operanden (Ein-/Ausgang der Steuerung)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="Adress">
+										<Description>Adresse</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="PLCNode">
+										<Description>Identifizierung der Steuerung</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="TagName">
+										<Description>Eindeutiger Name der Variablen (Bezeichner, Sy&lt;mbol) im Steuerungsprogramm</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="TagComment">
+										<Description>Beschreibung der Variablen</Description>
+									</Attribute>
+								</ExternalInterface>
+								<SupportedRoleClass RefRoleClassPath="VDMA66415RoleClassLib/VDMA66415"/>
+								<RoleRequirements RefBaseRoleClassPath="VDMA66415RoleClassLib/VDMA66415/DeviceFunction">
+									<Attribute AttributeDataType="xs:string" Name="Identifier">
+										<Description>Identifizierung der Gerätefunktion</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSign">
+										<Description>Referenzkennzeichen der Gerätefunktion, einheitlich/gemeinsam für alle Gewerke</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignM">
+										<Description>Referenzkennzeichen der Gerätefunktion: speziell Mechanik (Bauteilkennzeichen)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignBMK">
+										<Description>Referenzkennzeichen der Gerätefunktion: speziell Elektrotechnik (Betriebsmittelkennzeichen)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignFP">
+										<Description>Referenzkennzeichen der Gerätefunktion: speziell Fluidtechnik (Bezeichnungsschlüssel)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignPI">
+										<Description>Referenzkennzeichen der Gerätefunktion: speziell Prozesstechnik (Mess- und Regelstellenkennzeichen)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="DeviceFunctionText">
+										<Description>Name der Gerätefunktion (Funktionstext)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="DeviceFunctionTextShort">
+										<Description>Name der Gerätefunktion (Funktionstext) in Kurzform</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeSensor">
+										<Description>Funktionstyp Sensor, Erfassen</Description>
+										<Attribute AttributeDataType="xs:boolean" Name="TypeSensorSignal"/>
+										<Attribute AttributeDataType="xs:boolean" Name="TypeSensorValue"/>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeSensorBinary">
+										<Description>Binäres Sensor-Signal</Description>
+										<Attribute AttributeDataType="xs:boolean" Name="TypeLogicControl"/>
+										<Attribute AttributeDataType="xs:boolean" Name="TypeLogicCommunication"/>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeSensorValue">
+										<Description>Messwert</Description>
+										<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorSignal"/>
+										<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorValue"/>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeLogic">
+										<Description>Funktionstyp Logik, Auswerten</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeLogicControl">
+										<Description>Steuerung</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeLogicCommunication">
+										<Description>Kommunikation</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeActuator">
+										<Description>Funktionstyp Aktor, Reagieren</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorBinary">
+										<Description>Binäres Aktors-Signal</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorValue">
+										<Description>Sollwert, Stellwert</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeConnection">
+										<Description>Verbindung</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="TypeAccessory">
+										<Description>Zubehör</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="RelatedMechanicalDrawing">
+										<Description>Gerätefunktion relevant für Mechanik-CAD (Konstruktionszeichnung)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="RelatedElectricalDiagram">
+										<Description>Gerätefunktion relevant für Elektro-CAD (Schaltplan)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="RelatedFluidPowerDiagram">
+										<Description>Gerätefunktion relevant für Fluid-CAD (Fluidplan)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="RelatedPIDiagram">
+										<Description>Gerätefunktion relevant für Prozess-CAD (R&amp;I-Fließschema)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="RelatedSoftware">
+										<Description>Gerätefunktion relevant für Programmiersoftware</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:boolean" Name="RelatedSoftwareSafetyIO">
+										<Description>Gerätefunktion relevant für sicherheitsgerichtete Programmiersoftware</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ConnectionSource">
+										<Description>Anschlussquelle der Gerätefunktion</Description>
+										<Attribute AttributeDataType="xs:string" Name="ConnectionSign">
+											<Description>Referenzkennzeichen der Anschlussquelle</Description>
+										</Attribute>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ConnectionDestination">
+										<Description>Anschlussziel der Gerätefunktion</Description>
+										<Attribute AttributeDataType="xs:string" Name="ConnectionSign">
+											<Description>Referenzkennzeichen des Anschlusszieles</Description>
+										</Attribute>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="SafetyFunctionName">
+										<Description>Sicherheitsfunktion, in der die Gerätefunktion verwendet wird</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="SpanOfControlName">
+										<Description>Name des Maschinenbereiches, in dem die Gerätefunktion eingebunden ist (Wirkungsbereich)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="DeviceFunctionUserDefinedText">
+										<Description>Informationen des Anwenders zur Gerätefunktion</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="DeviceFunctionParameterUser">
+										<Description>Anwendungsspezifischer Parameter der Gerätefunktion</Description>
+										<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+											<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ParamterName">
+											<Description>Name des Parameters</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+											<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+											<Description>Wert des Parameters</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+											<Description>Datentyp des Parameters</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+											<Description>SI Einheit des Parameters</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+											<Description>Beschreibung des Parameters</Description>
+										</Attribute>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ToolID">
+										<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+										<Attribute AttributeDataType="xs:string" Name="ToolName">
+											<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ToolSign">
+											<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+											<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+										</Attribute>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="DataRevision">
+										<Description>Änderungskennzeichen für das Datenobjekt</Description>
+										<Attribute AttributeDataType="xs:string" Name="LastChange">
+											<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="Status">
+											<Description>Status des Bearbeitung des Datenobjektes</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:dateTime" Name="Time">
+											<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="Author">
+											<Description>Autorenkürzel des letzten Bearbeiters</Description>
+										</Attribute>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="VDMA66415.ToolID">
+										<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+										<Attribute AttributeDataType="xs:string" Name="ToolName">
+											<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ToolSign">
+											<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+											<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+										</Attribute>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="VDMA66415.DataRevision">
+										<Description>Änderungskennzeichen für das Datenobjekt</Description>
+										<Attribute AttributeDataType="xs:string" Name="LastChange">
+											<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="Status">
+											<Description>Status des Bearbeitung des Datenobjektes</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:dateTime" Name="Time">
+											<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+										</Attribute>
+										<Attribute AttributeDataType="xs:string" Name="Author">
+											<Description>Autorenkürzel des letzten Bearbeiters</Description>
+										</Attribute>
+									</Attribute>
+								</RoleRequirements>
+							</InternalElement>
+							<SupportedRoleClass RefRoleClassPath="VDMA66415RoleClassLib/VDMA66415"/>
+							<RoleRequirements RefBaseRoleClassPath="VDMA66415RoleClassLib/VDMA66415/Device">
+								<Attribute AttributeDataType="xs:string" Name="Identifier">
+									<Description>Identifizierung des Gerätes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="IsSubDeviceOf">
+									<Description>Zuordnung zu einem anderen (führenden) Gerät durch Eintrag des Device.Identifiers dieses Gerätes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="SubDeviceIndex">
+									<Description>Position des Gerätes im Verhältnis zum führenden Gerät</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceManufacturer">
+									<Description>Hersteller des Gerätes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceName">
+									<Description>Name des Gerätes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceOrderNumber">
+									<Description>Bestellnummer des Gerätes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="MaterialNumber">
+									<Description>Materialnummer des Gerätes im betriebswirtschaftlichen Planungssystem des Projektherstellers</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="PartNumber">
+									<Description>Artikelnummer des Gerätes, bezeichnet einen Gerätetyp mit gewissen Merkmalen im betriebswirtschaftlichen Planungssystem des Projektherstellers</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceUserDefinedText">
+									<Description>Information des Anwenders zum Gerät</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DeviceParameterUser">
+									<Description>Anwendungsspezifische Parameter des Gerätes</Description>
+									<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+										<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ParamterName">
+										<Description>Name des Parameters</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+										<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+										<Description>Wert des Parameters</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+										<Description>Datentyp des Parameters</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+										<Description>SI Einheit des Parameters</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+										<Description>Beschreibung des Parameters</Description>
+									</Attribute>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ToolID">
+									<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+									<Attribute AttributeDataType="xs:string" Name="ToolName">
+										<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ToolSign">
+										<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+										<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+									</Attribute>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="DataRevision">
+									<Description>Änderungskennzeichen für das Datenobjekt</Description>
+									<Attribute AttributeDataType="xs:string" Name="LastChange">
+										<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="Status">
+										<Description>Status des Bearbeitung des Datenobjektes</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:dateTime" Name="Time">
+										<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="Author">
+										<Description>Autorenkürzel des letzten Bearbeiters</Description>
+									</Attribute>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="VDMA66415.ToolID">
+									<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+									<Attribute AttributeDataType="xs:string" Name="ToolName">
+										<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ToolSign">
+										<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+										<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+									</Attribute>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="VDMA66415.DataRevision">
+									<Description>Änderungskennzeichen für das Datenobjekt</Description>
+									<Attribute AttributeDataType="xs:string" Name="LastChange">
+										<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="Status">
+										<Description>Status des Bearbeitung des Datenobjektes</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:dateTime" Name="Time">
+										<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="Author">
+										<Description>Autorenkürzel des letzten Bearbeiters</Description>
+									</Attribute>
+								</Attribute>
+								<ExternalInterface ID="d176cf84-9d4c-4e20-a7fb-4f92e6f8be7f" Name="DeviceDataSheetFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/DeviceDataSheetFileName">
+									<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+								</ExternalInterface>
+								<ExternalInterface ID="afbf8a5a-8a51-428a-b340-d180002f9e07" Name="DeviceDocFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/DeviceDocFileName">
+									<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+								</ExternalInterface>
+								<ExternalInterface ID="e58fbf38-99ad-4f2f-971a-4c7c6074a66a" Name="DeviceUserDefinedFile" RefBaseClassPath="VDMA66415InterfaceClassLib/DeviceUserDefinedFile">
+									<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+								</ExternalInterface>
+							</RoleRequirements>
+						</InternalElement>
+						<SupportedRoleClass RefRoleClassPath="VDMA66415RoleClassLib/VDMA66415"/>
+						<RoleRequirements RefBaseRoleClassPath="VDMA66415RoleClassLib/VDMA66415/Unit">
+							<Attribute AttributeDataType="xs:string" Name="Identifier"/>
+							<Attribute AttributeDataType="xs:string" Name="UnitSign"/>
+							<Attribute AttributeDataType="xs:string" Name="UnitName"/>
+							<Attribute AttributeDataType="xs:string" Name="UnitUserDefinedText">
+								<Description>Information des Anwenders zur Einheit</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="UnitParameterUser">
+								<Description>Anwendungsspezifischer Parameter der Einheit</Description>
+								<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+									<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParamterName">
+									<Description>Name des Parameters</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+									<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+									<Description>Wert des Parameters</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+									<Description>Datentyp des Parameters</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+									<Description>SI Einheit des Parameters</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+									<Description>Beschreibung des Parameters</Description>
+								</Attribute>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="UnitSequence">
+								<Description>Ablaufbeschreibung, die der Einheit zugeordnet ist</Description>
+								<Attribute AttributeDataType="xs:string" Name="SequenceName">
+									<Description>Name der Sequenz</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="SequenceStep">
+									<Description>Schritt der Sequenz</Description>
+									<Attribute AttributeDataType="xs:string" Name="StepName">
+										<Description>Name des Schrittes</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="StepNext">
+										<Description>Namen aller nachfolgenden Schritte</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="StepParameter">
+										<Description>Anwendungsspezifische Parameter des Schrittes</Description>
+									</Attribute>
+								</Attribute>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolID">
+								<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+								<Attribute AttributeDataType="xs:string" Name="ToolName">
+									<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ToolSign">
+									<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+									<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+								</Attribute>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="DataRevision">
+								<Description>Änderungskennzeichen für das Datenobjekt</Description>
+								<Attribute AttributeDataType="xs:string" Name="LastChange">
+									<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="Status">
+									<Description>Status des Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:dateTime" Name="Time">
+									<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="Author">
+									<Description>Autorenkürzel des letzten Bearbeiters</Description>
+								</Attribute>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="VDMA66415.ToolID">
+								<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+								<Attribute AttributeDataType="xs:string" Name="ToolName">
+									<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ToolSign">
+									<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+									<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+								</Attribute>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="VDMA66415.DataRevision">
+								<Description>Änderungskennzeichen für das Datenobjekt</Description>
+								<Attribute AttributeDataType="xs:string" Name="LastChange">
+									<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="Status">
+									<Description>Status des Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:dateTime" Name="Time">
+									<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="Author">
+									<Description>Autorenkürzel des letzten Bearbeiters</Description>
+								</Attribute>
+							</Attribute>
+							<ExternalInterface ID="4138b548-048e-40d5-a555-d570d0891e17" Name="UnitDrawingFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitDrawingFileName">
+								<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+							</ExternalInterface>
+							<ExternalInterface ID="397640ce-aa28-4728-a4c6-c5fda860b400" Name="UnitDocFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitDocFileName">
+								<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+							</ExternalInterface>
+							<ExternalInterface ID="9a2da90a-9a24-4f54-8d62-7239781ab507" Name="UnitUserDefinedFile" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitUserDefinedFile">
+								<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+							</ExternalInterface>
+						</RoleRequirements>
+					</InternalElement>
+					<InternalElement ID="4d1744e7-cedf-42ec-bfa8-b5a87da5b556" Name="Instance2OfUnit" RefBaseSystemUnitPath="VDMASystemUnitClassLib/Unit">
+						<Attribute AttributeDataType="xs:string" Name="Identifier"/>
+						<Attribute AttributeDataType="xs:string" Name="UnitSign"/>
+						<Attribute AttributeDataType="xs:string" Name="UnitName"/>
+						<Attribute AttributeDataType="xs:string" Name="UnitUserDefinedText">
+							<Description>Information des Anwenders zur Einheit</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="UnitParameterUser">
+							<Description>Anwendungsspezifischer Parameter der Einheit</Description>
+							<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+								<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ParamterName">
+								<Description>Name des Parameters</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+								<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+								<Description>Wert des Parameters</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+								<Description>Datentyp des Parameters</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+								<Description>SI Einheit des Parameters</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+								<Description>Beschreibung des Parameters</Description>
+							</Attribute>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="UnitSequence">
+							<Description>Ablaufbeschreibung, die der Einheit zugeordnet ist</Description>
+							<Attribute AttributeDataType="xs:string" Name="SequenceName">
+								<Description>Name der Sequenz</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="SequenceStep">
+								<Description>Schritt der Sequenz</Description>
+								<Attribute AttributeDataType="xs:string" Name="StepName">
+									<Description>Name des Schrittes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="StepNext">
+									<Description>Namen aller nachfolgenden Schritte</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="StepParameter">
+									<Description>Anwendungsspezifische Parameter des Schrittes</Description>
+								</Attribute>
+							</Attribute>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="ToolID">
+							<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+							<Attribute AttributeDataType="xs:string" Name="ToolName">
+								<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolSign">
+								<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+								<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+							</Attribute>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="DataRevision">
+							<Description>Änderungskennzeichen für das Datenobjekt</Description>
+							<Attribute AttributeDataType="xs:string" Name="LastChange">
+								<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="Status">
+								<Description>Status des Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:dateTime" Name="Time">
+								<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="Author">
+								<Description>Autorenkürzel des letzten Bearbeiters</Description>
+							</Attribute>
+						</Attribute>
+						<ExternalInterface ID="a5a5daab-0ace-46bb-90bb-c1bcf4a41c25" Name="UnitDrawingFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitDrawingFileName">
+							<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+						</ExternalInterface>
+						<ExternalInterface ID="bef85787-e388-43c0-86cc-d3d3d1a763c4" Name="UnitDocFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitDocFileName">
+							<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+						</ExternalInterface>
+						<ExternalInterface ID="d04a3a3b-eddb-43f2-830a-53415d23e723" Name="UnitUserDefinedFile" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitUserDefinedFile">
+							<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+						</ExternalInterface>
+						<SupportedRoleClass RefRoleClassPath="VDMA66415RoleClassLib/VDMA66415"/>
+						<RoleRequirements RefBaseRoleClassPath="VDMA66415RoleClassLib/VDMA66415/Unit">
+							<Attribute AttributeDataType="xs:string" Name="Identifier"/>
+							<Attribute AttributeDataType="xs:string" Name="UnitSign"/>
+							<Attribute AttributeDataType="xs:string" Name="UnitName"/>
+							<Attribute AttributeDataType="xs:string" Name="UnitUserDefinedText">
+								<Description>Information des Anwenders zur Einheit</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="UnitParameterUser">
+								<Description>Anwendungsspezifischer Parameter der Einheit</Description>
+								<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+									<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParamterName">
+									<Description>Name des Parameters</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+									<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+									<Description>Wert des Parameters</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+									<Description>Datentyp des Parameters</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+									<Description>SI Einheit des Parameters</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+									<Description>Beschreibung des Parameters</Description>
+								</Attribute>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="UnitSequence">
+								<Description>Ablaufbeschreibung, die der Einheit zugeordnet ist</Description>
+								<Attribute AttributeDataType="xs:string" Name="SequenceName">
+									<Description>Name der Sequenz</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="SequenceStep">
+									<Description>Schritt der Sequenz</Description>
+									<Attribute AttributeDataType="xs:string" Name="StepName">
+										<Description>Name des Schrittes</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="StepNext">
+										<Description>Namen aller nachfolgenden Schritte</Description>
+									</Attribute>
+									<Attribute AttributeDataType="xs:string" Name="StepParameter">
+										<Description>Anwendungsspezifische Parameter des Schrittes</Description>
+									</Attribute>
+								</Attribute>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolID">
+								<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+								<Attribute AttributeDataType="xs:string" Name="ToolName">
+									<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ToolSign">
+									<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+									<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+								</Attribute>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="DataRevision">
+								<Description>Änderungskennzeichen für das Datenobjekt</Description>
+								<Attribute AttributeDataType="xs:string" Name="LastChange">
+									<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="Status">
+									<Description>Status des Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:dateTime" Name="Time">
+									<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="Author">
+									<Description>Autorenkürzel des letzten Bearbeiters</Description>
+								</Attribute>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="VDMA66415.ToolID">
+								<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+								<Attribute AttributeDataType="xs:string" Name="ToolName">
+									<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ToolSign">
+									<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+									<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+								</Attribute>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="VDMA66415.DataRevision">
+								<Description>Änderungskennzeichen für das Datenobjekt</Description>
+								<Attribute AttributeDataType="xs:string" Name="LastChange">
+									<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="Status">
+									<Description>Status des Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:dateTime" Name="Time">
+									<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+								</Attribute>
+								<Attribute AttributeDataType="xs:string" Name="Author">
+									<Description>Autorenkürzel des letzten Bearbeiters</Description>
+								</Attribute>
+							</Attribute>
+							<ExternalInterface ID="e945a36e-8718-4d3f-bc99-29534dafe213" Name="UnitDrawingFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitDrawingFileName">
+								<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+							</ExternalInterface>
+							<ExternalInterface ID="9fd4500e-1168-4c99-afc6-5f338fc98a93" Name="UnitDocFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitDocFileName">
+								<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+							</ExternalInterface>
+							<ExternalInterface ID="b2f2d50e-0fd8-43e6-9234-cdbcc9a81a39" Name="UnitUserDefinedFile" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitUserDefinedFile">
+								<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+							</ExternalInterface>
+						</RoleRequirements>
+					</InternalElement>
+					<SupportedRoleClass RefRoleClassPath="VDMA66415RoleClassLib/VDMA66415"/>
+					<RoleRequirements RefBaseRoleClassPath="VDMA66415RoleClassLib/VDMA66415/SubProject">
+						<Attribute AttributeDataType="xs:string" Name="SubProjectName">
+							<Description>Name des Unterprojektes</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="SubProjectSign">
+							<Description>Kennzeichen / Nummer des Unterprojektes</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="SubProjectRevision">
+							<Description>Revisionsnummer des Unterprojektes</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="SubProjectInformation">
+							<Description>Informationstext zum Unterprojekt</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="ToolID">
+							<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+							<Attribute AttributeDataType="xs:string" Name="ToolName">
+								<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolSign">
+								<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+								<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+							</Attribute>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="DataRevision">
+							<Description>Änderungskennzeichen für das Datenobjekt</Description>
+							<Attribute AttributeDataType="xs:string" Name="LastChange">
+								<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="Status">
+								<Description>Status des Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:dateTime" Name="Time">
+								<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="Author">
+								<Description>Autorenkürzel des letzten Bearbeiters</Description>
+							</Attribute>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="VDMA66415.ToolID">
+							<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+							<Attribute AttributeDataType="xs:string" Name="ToolName">
+								<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolSign">
+								<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+								<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+							</Attribute>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="VDMA66415.DataRevision">
+							<Description>Änderungskennzeichen für das Datenobjekt</Description>
+							<Attribute AttributeDataType="xs:string" Name="LastChange">
+								<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="Status">
+								<Description>Status des Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:dateTime" Name="Time">
+								<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="Author">
+								<Description>Autorenkürzel des letzten Bearbeiters</Description>
+							</Attribute>
+						</Attribute>
+					</RoleRequirements>
+				</InternalElement>
+				<InternalElement ID="49e79881-2435-4316-be16-6be5b266af90" Name="Instance2OfSubProject" RefBaseSystemUnitPath="VDMASystemUnitClassLib/SubProject">
+					<Attribute AttributeDataType="xs:string" Name="SubProjectName">
+						<Description>Name des Unterprojektes</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="SubProjectSign">
+						<Description>Kennzeichen / Nummer des Unterprojektes</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="SubProjectRevision">
+						<Description>Revisionsnummer des Unterprojektes</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="SubProjectInformation">
+						<Description>Informationstext zum Unterprojekt</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ToolID">
+						<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+						<Attribute AttributeDataType="xs:string" Name="ToolName">
+							<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="ToolSign">
+							<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+							<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+						</Attribute>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="DataRevision">
+						<Description>Änderungskennzeichen für das Datenobjekt</Description>
+						<Attribute AttributeDataType="xs:string" Name="LastChange">
+							<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="Status">
+							<Description>Status des Bearbeitung des Datenobjektes</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:dateTime" Name="Time">
+							<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="Author">
+							<Description>Autorenkürzel des letzten Bearbeiters</Description>
+						</Attribute>
+					</Attribute>
+					<SupportedRoleClass RefRoleClassPath="VDMA66415RoleClassLib/VDMA66415"/>
+					<RoleRequirements RefBaseRoleClassPath="VDMA66415RoleClassLib/VDMA66415/SubProject">
+						<Attribute AttributeDataType="xs:string" Name="SubProjectName">
+							<Description>Name des Unterprojektes</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="SubProjectSign">
+							<Description>Kennzeichen / Nummer des Unterprojektes</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="SubProjectRevision">
+							<Description>Revisionsnummer des Unterprojektes</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="SubProjectInformation">
+							<Description>Informationstext zum Unterprojekt</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="ToolID">
+							<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+							<Attribute AttributeDataType="xs:string" Name="ToolName">
+								<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolSign">
+								<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+								<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+							</Attribute>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="DataRevision">
+							<Description>Änderungskennzeichen für das Datenobjekt</Description>
+							<Attribute AttributeDataType="xs:string" Name="LastChange">
+								<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="Status">
+								<Description>Status des Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:dateTime" Name="Time">
+								<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="Author">
+								<Description>Autorenkürzel des letzten Bearbeiters</Description>
+							</Attribute>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="VDMA66415.ToolID">
+							<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+							<Attribute AttributeDataType="xs:string" Name="ToolName">
+								<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolSign">
+								<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+								<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+							</Attribute>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="VDMA66415.DataRevision">
+							<Description>Änderungskennzeichen für das Datenobjekt</Description>
+							<Attribute AttributeDataType="xs:string" Name="LastChange">
+								<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="Status">
+								<Description>Status des Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:dateTime" Name="Time">
+								<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+							</Attribute>
+							<Attribute AttributeDataType="xs:string" Name="Author">
+								<Description>Autorenkürzel des letzten Bearbeiters</Description>
+							</Attribute>
+						</Attribute>
+					</RoleRequirements>
+				</InternalElement>
+				<RoleRequirements RefBaseRoleClassPath="VDMA66415RoleClassLib/VDMA66415/Project">
+					<Attribute AttributeDataType="xs:string" Name="ProjectManufacturer">
+						<Description>Projekthersteller ((Maschinenhersteller)</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ProjectName">
+						<Description>Name des Projektes</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ProjectSign">
+						<Description>Kennzeichen / Nummer des Projektes</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ProjectRevision">
+						<Description>Revisionsnummer des Projektes</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ProjectInformation">
+						<Description>Informationstext zum Projekt</Description>
+					</Attribute>
+				</RoleRequirements>
+			</InternalElement>
+			<RoleRequirements RefBaseRoleClassPath="VDMA66415RoleClassLib/VDMA66415/File">
+				<Attribute AttributeDataType="xs:string" Name="Version">
+					<Description>Version der Dateiformat-Definition VDMA66415</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="FileName">
+					<Description>Name der Projekt-Datei</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="FileVersion">
+					<Description>Version der Projektdatei</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:dateTime" Name="FileTime">
+					<Description>Zeitpunkt des Schreibens (Speicherns) der Projektdatei</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="FileAuthor">
+					<Description>Eindeutiges Autorenkürzel des Bearbeiters der Projektdatei</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="FileInfo">
+					<Description>Informationstext zur Projektdatei</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:dateTime" Name="FilePriorTime">
+					<Description>Zeitpunkt des Schreibens (Speicherns) der Vorgängerprojektdatei, welche angereichert oder gelesen wurde</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="FilePriorAuther">
+					<Description>Eindeutiges Autorenkürzel des Bearbeiters der Vorgängerprojektdatei, welche angereichert oder gelesen wurde</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="FilePriorInfo">
+					<Description>Informationstext der Vorgängerprojektdatei, welche angereichert oder gelesen wurde</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:language" Name="UsedLanguages">
+					<Description>Aufzählung aller in der Projektdatei verwendeten Sprachen</Description>
+					<DefaultValue>de, en</DefaultValue>
+				</Attribute>
+			</RoleRequirements>
+		</InternalElement>
+	</InstanceHierarchy>
+	<InterfaceClassLib Name="AutomationMLInterfaceClassLib">
+		<Description>Standard Automation Markup Language Interface Class Library - Part 1 Content extended with Part 3 and Part 4 Content</Description>
+		<Version>2.2.2</Version>
+		<InterfaceClass Name="AutomationMLBaseInterface">
+			<InterfaceClass Name="Order" RefBaseClassPath="AutomationMLBaseInterface">
+				<Attribute AttributeDataType="xs:string" Name="Direction"/>
+			</InterfaceClass>
+			<InterfaceClass Name="PortConnector" RefBaseClassPath="AutomationMLBaseInterface"/>
+			<InterfaceClass Name="InterlockingConnector" RefBaseClassPath="AutomationMLBaseInterface"/>
+			<InterfaceClass Name="PPRConnector" RefBaseClassPath="AutomationMLBaseInterface"/>
+			<InterfaceClass Name="ExternalDataConnector" RefBaseClassPath="AutomationMLBaseInterface">
+				<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+				<InterfaceClass Name="COLLADAInterface" RefBaseClassPath="ExternalDataConnector"/>
+				<InterfaceClass Name="PLCopenXMLInterface" RefBaseClassPath="ExternalDataConnector">
+					<InterfaceClass Name="LogicInterface" RefBaseClassPath="PLCopenXMLInterface"/>
+					<InterfaceClass Name="VariableInterface" RefBaseClassPath="PLCopenXMLInterface">
+						<InterfaceClass Name="InterlockingVariableInterface" RefBaseClassPath="VariableInterface">
+							<Attribute AttributeDataType="xs:boolean" Name="SafeConditionEquals">
+								<DefaultValue>true</DefaultValue>
+							</Attribute>
+						</InterfaceClass>
+					</InterfaceClass>
+				</InterfaceClass>
+			</InterfaceClass>
+			<InterfaceClass Name="Communication" RefBaseClassPath="AutomationMLBaseInterface">
+				<InterfaceClass Name="SignalInterface" RefBaseClassPath="Communication"/>
+			</InterfaceClass>
+			<InterfaceClass Name="AttachmentInterface" RefBaseClassPath="AutomationMLBaseInterface"/>
+		</InterfaceClass>
+	</InterfaceClassLib>
+	<InterfaceClassLib Name="VDMA66415InterfaceClassLib">
+		<Version>0.9</Version>
+		<InterfaceClass Name="PLCTag" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/PLCopenXMLInterface/VariableInterface">
+			<Attribute AttributeDataType="xs:string" Name="Identifier"/>
+			<Attribute AttributeDataType="xs:string" Name="ToolID">
+				<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+				<Attribute AttributeDataType="xs:string" Name="ToolName">
+					<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ToolSign">
+					<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+					<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+				</Attribute>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DataRevision">
+				<Description>Änderungskennzeichen für das Datenobjekt</Description>
+				<Attribute AttributeDataType="xs:string" Name="LastChange">
+					<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="Status">
+					<Description>Status des Bearbeitung des Datenobjektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:dateTime" Name="Time">
+					<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="Author">
+					<Description>Autorenkürzel des letzten Bearbeiters</Description>
+				</Attribute>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="PLCManufacturer">
+				<Description>Name des Herstellers der Steuerung</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="PLCName">
+				<Description>Name der Programmiersoftware der Steuerung, inkl. Version</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="Operand">
+				<Description>Typ des Operanden (Ein-/Ausgang der Steuerung)</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="Adress">
+				<Description>Adresse</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="PLCNode">
+				<Description>Identifizierung der Steuerung</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="TagName">
+				<Description>Eindeutiger Name der Variablen (Bezeichner, Sy&lt;mbol) im Steuerungsprogramm</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="TagComment">
+				<Description>Beschreibung der Variablen</Description>
+			</Attribute>
+		</InterfaceClass>
+		<InterfaceClass Name="UnitDrawingFileName" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector"/>
+		<InterfaceClass ID="ca35eab5-1b07-452c-8759-5fcb6b6dd306" Name="UnitDocFileName" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector"/>
+		<InterfaceClass ID="54dbf3f7-33ae-414d-bed1-8548b69a6bfd" Name="UnitUserDefinedFile" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector"/>
+		<InterfaceClass ID="80c8f0e3-4cf9-4e9a-8183-32d28c256b75" Name="DeviceDataSheetFileName" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector"/>
+		<InterfaceClass ID="430415b2-3574-4de5-b44a-842c27b128f0" Name="DeviceDocFileName" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector"/>
+		<InterfaceClass ID="920e07b7-929b-4d44-92d0-d462efda2d89" Name="DeviceUserDefinedFile" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector"/>
+	</InterfaceClassLib>
+	<RoleClassLib Name="VDMA66415RoleClassLib">
+		<Version>0.9</Version>
+		<RoleClass Name="VDMA66415" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole">
+			<Attribute AttributeDataType="xs:string" Name="ToolID">
+				<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+				<Attribute AttributeDataType="xs:string" Name="ToolName">
+					<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ToolSign">
+					<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+					<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+				</Attribute>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DataRevision">
+				<Description>Änderungskennzeichen für das Datenobjekt</Description>
+				<Attribute AttributeDataType="xs:string" Name="LastChange">
+					<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="Status">
+					<Description>Status des Bearbeitung des Datenobjektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:dateTime" Name="Time">
+					<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="Author">
+					<Description>Autorenkürzel des letzten Bearbeiters</Description>
+				</Attribute>
+			</Attribute>
+			<RoleClass Name="File" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole">
+				<Attribute AttributeDataType="xs:string" Name="Version">
+					<Description>Version der Dateiformat-Definition VDMA66415</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="FileName">
+					<Description>Name der Projekt-Datei</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="FileVersion">
+					<Description>Version der Projektdatei</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:dateTime" Name="FileTime">
+					<Description>Zeitpunkt des Schreibens (Speicherns) der Projektdatei</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="FileAuthor">
+					<Description>Eindeutiges Autorenkürzel des Bearbeiters der Projektdatei</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="FileInfo">
+					<Description>Informationstext zur Projektdatei</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:dateTime" Name="FilePriorTime">
+					<Description>Zeitpunkt des Schreibens (Speicherns) der Vorgängerprojektdatei, welche angereichert oder gelesen wurde</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="FilePriorAuther">
+					<Description>Eindeutiges Autorenkürzel des Bearbeiters der Vorgängerprojektdatei, welche angereichert oder gelesen wurde</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="FilePriorInfo">
+					<Description>Informationstext der Vorgängerprojektdatei, welche angereichert oder gelesen wurde</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:language" Name="UsedLanguages">
+					<Description>Aufzählung aller in der Projektdatei verwendeten Sprachen</Description>
+					<DefaultValue>de, en</DefaultValue>
+				</Attribute>
+			</RoleClass>
+			<RoleClass Name="Project" RefBaseClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole">
+				<Attribute AttributeDataType="xs:string" Name="ProjectManufacturer">
+					<Description>Projekthersteller ((Maschinenhersteller)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ProjectName">
+					<Description>Name des Projektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ProjectSign">
+					<Description>Kennzeichen / Nummer des Projektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ProjectRevision">
+					<Description>Revisionsnummer des Projektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ProjectInformation">
+					<Description>Informationstext zum Projekt</Description>
+				</Attribute>
+			</RoleClass>
+			<RoleClass Name="SubProject" RefBaseClassPath="VDMA66415RoleClassLib/VDMA66415">
+				<Attribute AttributeDataType="xs:string" Name="SubProjectName">
+					<Description>Name des Unterprojektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="SubProjectSign">
+					<Description>Kennzeichen / Nummer des Unterprojektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="SubProjectRevision">
+					<Description>Revisionsnummer des Unterprojektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="SubProjectInformation">
+					<Description>Informationstext zum Unterprojekt</Description>
+				</Attribute>
+			</RoleClass>
+			<RoleClass Name="Unit" RefBaseClassPath="VDMA66415RoleClassLib/VDMA66415">
+				<Attribute AttributeDataType="xs:string" Name="Identifier"/>
+				<Attribute AttributeDataType="xs:string" Name="UnitSign"/>
+				<Attribute AttributeDataType="xs:string" Name="UnitName"/>
+				<Attribute AttributeDataType="xs:string" Name="UnitUserDefinedText">
+					<Description>Information des Anwenders zur Einheit</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="UnitParameterUser">
+					<Description>Anwendungsspezifischer Parameter der Einheit</Description>
+					<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+						<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParamterName">
+						<Description>Name des Parameters</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+						<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+						<Description>Wert des Parameters</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+						<Description>Datentyp des Parameters</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+						<Description>SI Einheit des Parameters</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+						<Description>Beschreibung des Parameters</Description>
+					</Attribute>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="UnitSequence">
+					<Description>Ablaufbeschreibung, die der Einheit zugeordnet ist</Description>
+					<Attribute AttributeDataType="xs:string" Name="SequenceName">
+						<Description>Name der Sequenz</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="SequenceStep">
+						<Description>Schritt der Sequenz</Description>
+						<Attribute AttributeDataType="xs:string" Name="StepName">
+							<Description>Name des Schrittes</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="StepNext">
+							<Description>Namen aller nachfolgenden Schritte</Description>
+						</Attribute>
+						<Attribute AttributeDataType="xs:string" Name="StepParameter">
+							<Description>Anwendungsspezifische Parameter des Schrittes</Description>
+						</Attribute>
+					</Attribute>
+				</Attribute>
+				<ExternalInterface ID="2170d749-95d3-47f8-9860-f66b359dc475" Name="UnitDrawingFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitDrawingFileName">
+					<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+				</ExternalInterface>
+				<ExternalInterface ID="43b1e00a-2005-4d74-b2d5-ee8c9999d054" Name="UnitDocFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitDocFileName">
+					<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+				</ExternalInterface>
+				<ExternalInterface ID="e4acda0b-bccd-45bd-80d4-9df6d4bec9a6" Name="UnitUserDefinedFile" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitUserDefinedFile">
+					<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+				</ExternalInterface>
+			</RoleClass>
+			<RoleClass Name="Device" RefBaseClassPath="VDMA66415RoleClassLib/VDMA66415">
+				<Attribute AttributeDataType="xs:string" Name="Identifier">
+					<Description>Identifizierung des Gerätes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="IsSubDeviceOf">
+					<Description>Zuordnung zu einem anderen (führenden) Gerät durch Eintrag des Device.Identifiers dieses Gerätes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="SubDeviceIndex">
+					<Description>Position des Gerätes im Verhältnis zum führenden Gerät</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceManufacturer">
+					<Description>Hersteller des Gerätes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceName">
+					<Description>Name des Gerätes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceOrderNumber">
+					<Description>Bestellnummer des Gerätes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="MaterialNumber">
+					<Description>Materialnummer des Gerätes im betriebswirtschaftlichen Planungssystem des Projektherstellers</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="PartNumber">
+					<Description>Artikelnummer des Gerätes, bezeichnet einen Gerätetyp mit gewissen Merkmalen im betriebswirtschaftlichen Planungssystem des Projektherstellers</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceUserDefinedText">
+					<Description>Information des Anwenders zum Gerät</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceParameterUser">
+					<Description>Anwendungsspezifische Parameter des Gerätes</Description>
+					<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+						<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParamterName">
+						<Description>Name des Parameters</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+						<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+						<Description>Wert des Parameters</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+						<Description>Datentyp des Parameters</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+						<Description>SI Einheit des Parameters</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+						<Description>Beschreibung des Parameters</Description>
+					</Attribute>
+				</Attribute>
+				<ExternalInterface ID="17fbe191-b285-41db-a2c1-d017ad6316d2" Name="DeviceDataSheetFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/DeviceDataSheetFileName">
+					<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+				</ExternalInterface>
+				<ExternalInterface ID="83a824ac-b2b7-44c4-8ca9-0d3140cb167c" Name="DeviceDocFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/DeviceDocFileName">
+					<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+				</ExternalInterface>
+				<ExternalInterface ID="88ab16c5-1c6e-46ae-92ee-51ac665231e0" Name="DeviceUserDefinedFile" RefBaseClassPath="VDMA66415InterfaceClassLib/DeviceUserDefinedFile">
+					<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+				</ExternalInterface>
+			</RoleClass>
+			<RoleClass Name="DeviceFunction" RefBaseClassPath="VDMA66415RoleClassLib/VDMA66415">
+				<Attribute AttributeDataType="xs:string" Name="Identifier">
+					<Description>Identifizierung der Gerätefunktion</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSign">
+					<Description>Referenzkennzeichen der Gerätefunktion, einheitlich/gemeinsam für alle Gewerke</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignM">
+					<Description>Referenzkennzeichen der Gerätefunktion: speziell Mechanik (Bauteilkennzeichen)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignBMK">
+					<Description>Referenzkennzeichen der Gerätefunktion: speziell Elektrotechnik (Betriebsmittelkennzeichen)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignFP">
+					<Description>Referenzkennzeichen der Gerätefunktion: speziell Fluidtechnik (Bezeichnungsschlüssel)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignPI">
+					<Description>Referenzkennzeichen der Gerätefunktion: speziell Prozesstechnik (Mess- und Regelstellenkennzeichen)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceFunctionText">
+					<Description>Name der Gerätefunktion (Funktionstext)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceFunctionTextShort">
+					<Description>Name der Gerätefunktion (Funktionstext) in Kurzform</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeSensor">
+					<Description>Funktionstyp Sensor, Erfassen</Description>
+					<Attribute AttributeDataType="xs:boolean" Name="TypeSensorSignal"/>
+					<Attribute AttributeDataType="xs:boolean" Name="TypeSensorValue"/>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeSensorBinary">
+					<Description>Binäres Sensor-Signal</Description>
+					<Attribute AttributeDataType="xs:boolean" Name="TypeLogicControl"/>
+					<Attribute AttributeDataType="xs:boolean" Name="TypeLogicCommunication"/>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeSensorValue">
+					<Description>Messwert</Description>
+					<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorSignal"/>
+					<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorValue"/>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeLogic">
+					<Description>Funktionstyp Logik, Auswerten</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeLogicControl">
+					<Description>Steuerung</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeLogicCommunication">
+					<Description>Kommunikation</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeActuator">
+					<Description>Funktionstyp Aktor, Reagieren</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorBinary">
+					<Description>Binäres Aktors-Signal</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorValue">
+					<Description>Sollwert, Stellwert</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeConnection">
+					<Description>Verbindung</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeAccessory">
+					<Description>Zubehör</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="RelatedMechanicalDrawing">
+					<Description>Gerätefunktion relevant für Mechanik-CAD (Konstruktionszeichnung)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="RelatedElectricalDiagram">
+					<Description>Gerätefunktion relevant für Elektro-CAD (Schaltplan)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="RelatedFluidPowerDiagram">
+					<Description>Gerätefunktion relevant für Fluid-CAD (Fluidplan)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="RelatedPIDiagram">
+					<Description>Gerätefunktion relevant für Prozess-CAD (R&amp;I-Fließschema)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="RelatedSoftware">
+					<Description>Gerätefunktion relevant für Programmiersoftware</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:boolean" Name="RelatedSoftwareSafetyIO">
+					<Description>Gerätefunktion relevant für sicherheitsgerichtete Programmiersoftware</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ConnectionSource">
+					<Description>Anschlussquelle der Gerätefunktion</Description>
+					<Attribute AttributeDataType="xs:string" Name="ConnectionSign">
+						<Description>Referenzkennzeichen der Anschlussquelle</Description>
+					</Attribute>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ConnectionDestination">
+					<Description>Anschlussziel der Gerätefunktion</Description>
+					<Attribute AttributeDataType="xs:string" Name="ConnectionSign">
+						<Description>Referenzkennzeichen des Anschlusszieles</Description>
+					</Attribute>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="SafetyFunctionName">
+					<Description>Sicherheitsfunktion, in der die Gerätefunktion verwendet wird</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="SpanOfControlName">
+					<Description>Name des Maschinenbereiches, in dem die Gerätefunktion eingebunden ist (Wirkungsbereich)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceFunctionUserDefinedText">
+					<Description>Informationen des Anwenders zur Gerätefunktion</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="DeviceFunctionParameterUser">
+					<Description>Anwendungsspezifischer Parameter der Gerätefunktion</Description>
+					<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+						<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParamterName">
+						<Description>Name des Parameters</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+						<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+						<Description>Wert des Parameters</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+						<Description>Datentyp des Parameters</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+						<Description>SI Einheit des Parameters</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+						<Description>Beschreibung des Parameters</Description>
+					</Attribute>
+				</Attribute>
+			</RoleClass>
+		</RoleClass>
+	</RoleClassLib>
+	<RoleClassLib Name="AutomationMLBaseRoleClassLib">
+		<Description>Automation Markup Language Base Role Class Library - Part 1 Content extended with Part 3 and Part 4 Content</Description>
+		<Version>2.2.2</Version>
+		<RoleClass Name="AutomationMLBaseRole">
+			<RoleClass Name="Group" RefBaseClassPath="AutomationMLBaseRole">
+				<Attribute AttributeDataType="xs:string" Name="AssociatedFacet"/>
+				<RoleClass Name="SignalGroup" RefBaseClassPath="Group"/>
+				<RoleClass Name="ComponentGroup" RefBaseClassPath="Group"/>
+			</RoleClass>
+			<RoleClass Name="Facet" RefBaseClassPath="AutomationMLBaseRole"/>
+			<RoleClass Name="Port" RefBaseClassPath="AutomationMLBaseRole">
+				<Attribute AttributeDataType="xs:string" Name="Direction"/>
+				<Attribute Name="Cardinality">
+					<Attribute AttributeDataType="xs:unsignedInt" Name="MinOccur"/>
+					<Attribute AttributeDataType="xs:unsignedInt" Name="MaxOccur"/>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="Category"/>
+				<ExternalInterface ID="9942bd9c-c19d-44e4-a197-11b9edf264e7" Name="ConnectionPoint" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/PortConnector"/>
+			</RoleClass>
+			<RoleClass Name="Resource" RefBaseClassPath="AutomationMLBaseRole"/>
+			<RoleClass Name="Product" RefBaseClassPath="AutomationMLBaseRole"/>
+			<RoleClass Name="Process" RefBaseClassPath="AutomationMLBaseRole"/>
+			<RoleClass Name="Structure" RefBaseClassPath="AutomationMLBaseRole">
+				<RoleClass Name="ProductStructure" RefBaseClassPath="Structure"/>
+				<RoleClass Name="ProcessStructure" RefBaseClassPath="Structure"/>
+				<RoleClass Name="ResourceStructure" RefBaseClassPath="Structure"/>
+			</RoleClass>
+			<RoleClass Name="PropertySet" RefBaseClassPath="AutomationMLBaseRole"/>
+			<RoleClass Name="Frame" RefBaseClassPath="AutomationMLBaseRole"/>
+		</RoleClass>
+	</RoleClassLib>
+	<SystemUnitClassLib Name="VDMASystemUnitClassLib">
+		<Version>0.9</Version>
+		<SystemUnitClass Name="VDMA66415BaseObject">
+			<Attribute AttributeDataType="xs:string" Name="ToolID">
+				<Description>Engineering-Werkzeug-interne Identifikation des Datenobjektes</Description>
+				<Attribute AttributeDataType="xs:string" Name="ToolName">
+					<Description>Eindeutiger Name des Engineering-Werkzeuges</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ToolSign">
+					<Description>Eineindeutige Kennzeichnung der Instanz der Engineering-Software</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ToolIDInternal">
+					<Description>Identifikation des Projektes im Werkzeuginternen Datenmodell</Description>
+				</Attribute>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DataRevision">
+				<Description>Änderungskennzeichen für das Datenobjekt</Description>
+				<Attribute AttributeDataType="xs:string" Name="LastChange">
+					<Description>Kennzeichnung der letzten Bearbeitung des Datenobjektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="Status">
+					<Description>Status des Bearbeitung des Datenobjektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:dateTime" Name="Time">
+					<Description>Zeitpunkt der letzten Bearbeitung des Datenobjektes</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="Author">
+					<Description>Autorenkürzel des letzten Bearbeiters</Description>
+				</Attribute>
+			</Attribute>
+			<SupportedRoleClass RefRoleClassPath="VDMA66415RoleClassLib/VDMA66415"/>
+		</SystemUnitClass>
+		<SystemUnitClass Name="File">
+			<Attribute AttributeDataType="xs:string" Name="Version">
+				<Description>Version der Dateiformat-Definition VDMA66415</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="FileName">
+				<Description>Name der Projekt-Datei</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="FileVersion">
+				<Description>Version der Projektdatei</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:dateTime" Name="FileTime">
+				<Description>Zeitpunkt des Schreibens (Speicherns) der Projektdatei</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="FileAuthor">
+				<Description>Eindeutiges Autorenkürzel des Bearbeiters der Projektdatei</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="FileInfo">
+				<Description>Informationstext zur Projektdatei</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:dateTime" Name="FilePriorTime">
+				<Description>Zeitpunkt des Schreibens (Speicherns) der Vorgängerprojektdatei, welche angereichert oder gelesen wurde</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="FilePriorAuther">
+				<Description>Eindeutiges Autorenkürzel des Bearbeiters der Vorgängerprojektdatei, welche angereichert oder gelesen wurde</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="FilePriorInfo">
+				<Description>Informationstext der Vorgängerprojektdatei, welche angereichert oder gelesen wurde</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:language" Name="UsedLanguages">
+				<Description>Aufzählung aller in der Projektdatei verwendeten Sprachen</Description>
+				<DefaultValue>de, en</DefaultValue>
+			</Attribute>
+			<SupportedRoleClass RefRoleClassPath="VDMA66415RoleClassLib/VDMA66415/File"/>
+		</SystemUnitClass>
+		<SystemUnitClass Name="Project">
+			<Attribute AttributeDataType="xs:string" Name="ProjectManufacturer">
+				<Description>Projekthersteller ((Maschinenhersteller)</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="ProjectName">
+				<Description>Name des Projektes</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="ProjectSign">
+				<Description>Kennzeichen / Nummer des Projektes</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="ProjectRevision">
+				<Description>Revisionsnummer des Projektes</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="ProjectInformation">
+				<Description>Informationstext zum Projekt</Description>
+			</Attribute>
+			<SupportedRoleClass RefRoleClassPath="VDMA66415RoleClassLib/VDMA66415/Project"/>
+		</SystemUnitClass>
+		<SystemUnitClass Name="SubProject" RefBaseClassPath="VDMASystemUnitClassLib/VDMA66415BaseObject">
+			<Attribute AttributeDataType="xs:string" Name="SubProjectName">
+				<Description>Name des Unterprojektes</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="SubProjectSign">
+				<Description>Kennzeichen / Nummer des Unterprojektes</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="SubProjectRevision">
+				<Description>Revisionsnummer des Unterprojektes</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="SubProjectInformation">
+				<Description>Informationstext zum Unterprojekt</Description>
+			</Attribute>
+			<SupportedRoleClass RefRoleClassPath="VDMA66415RoleClassLib/VDMA66415/SubProject"/>
+		</SystemUnitClass>
+		<SystemUnitClass Name="Unit" RefBaseClassPath="VDMASystemUnitClassLib/VDMA66415BaseObject">
+			<Attribute AttributeDataType="xs:string" Name="Identifier"/>
+			<Attribute AttributeDataType="xs:string" Name="UnitSign"/>
+			<Attribute AttributeDataType="xs:string" Name="UnitName"/>
+			<Attribute AttributeDataType="xs:string" Name="UnitUserDefinedText">
+				<Description>Information des Anwenders zur Einheit</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="UnitParameterUser">
+				<Description>Anwendungsspezifischer Parameter der Einheit</Description>
+				<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+					<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParamterName">
+					<Description>Name des Parameters</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+					<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+					<Description>Wert des Parameters</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+					<Description>Datentyp des Parameters</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+					<Description>SI Einheit des Parameters</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+					<Description>Beschreibung des Parameters</Description>
+				</Attribute>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="UnitSequence">
+				<Description>Ablaufbeschreibung, die der Einheit zugeordnet ist</Description>
+				<Attribute AttributeDataType="xs:string" Name="SequenceName">
+					<Description>Name der Sequenz</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="SequenceStep">
+					<Description>Schritt der Sequenz</Description>
+					<Attribute AttributeDataType="xs:string" Name="StepName">
+						<Description>Name des Schrittes</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="StepNext">
+						<Description>Namen aller nachfolgenden Schritte</Description>
+					</Attribute>
+					<Attribute AttributeDataType="xs:string" Name="StepParameter">
+						<Description>Anwendungsspezifische Parameter des Schrittes</Description>
+					</Attribute>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface ID="2170d749-95d3-47f8-9860-f66b359dc475" Name="UnitDrawingFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitDrawingFileName">
+				<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+			</ExternalInterface>
+			<ExternalInterface ID="43b1e00a-2005-4d74-b2d5-ee8c9999d054" Name="UnitDocFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitDocFileName">
+				<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+			</ExternalInterface>
+			<ExternalInterface ID="e4acda0b-bccd-45bd-80d4-9df6d4bec9a6" Name="UnitUserDefinedFile" RefBaseClassPath="VDMA66415InterfaceClassLib/UnitUserDefinedFile">
+				<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+			</ExternalInterface>
+			<SupportedRoleClass RefRoleClassPath="VDMA66415RoleClassLib/VDMA66415/Unit"/>
+		</SystemUnitClass>
+		<SystemUnitClass Name="Device" RefBaseClassPath="VDMASystemUnitClassLib/VDMA66415BaseObject">
+			<Attribute AttributeDataType="xs:string" Name="Identifier">
+				<Description>Identifizierung des Gerätes</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="IsSubDeviceOf">
+				<Description>Zuordnung zu einem anderen (führenden) Gerät durch Eintrag des Device.Identifiers dieses Gerätes</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="SubDeviceIndex">
+				<Description>Position des Gerätes im Verhältnis zum führenden Gerät</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceManufacturer">
+				<Description>Hersteller des Gerätes</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceName">
+				<Description>Name des Gerätes</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceOrderNumber">
+				<Description>Bestellnummer des Gerätes</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="MaterialNumber">
+				<Description>Materialnummer des Gerätes im betriebswirtschaftlichen Planungssystem des Projektherstellers</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="PartNumber">
+				<Description>Artikelnummer des Gerätes, bezeichnet einen Gerätetyp mit gewissen Merkmalen im betriebswirtschaftlichen Planungssystem des Projektherstellers</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceUserDefinedText">
+				<Description>Information des Anwenders zum Gerät</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceParameterUser">
+				<Description>Anwendungsspezifische Parameter des Gerätes</Description>
+				<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+					<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParamterName">
+					<Description>Name des Parameters</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+					<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+					<Description>Wert des Parameters</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+					<Description>Datentyp des Parameters</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+					<Description>SI Einheit des Parameters</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+					<Description>Beschreibung des Parameters</Description>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface ID="17fbe191-b285-41db-a2c1-d017ad6316d2" Name="DeviceDataSheetFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/DeviceDataSheetFileName">
+				<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+			</ExternalInterface>
+			<ExternalInterface ID="83a824ac-b2b7-44c4-8ca9-0d3140cb167c" Name="DeviceDocFileName" RefBaseClassPath="VDMA66415InterfaceClassLib/DeviceDocFileName">
+				<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+			</ExternalInterface>
+			<ExternalInterface ID="88ab16c5-1c6e-46ae-92ee-51ac665231e0" Name="DeviceUserDefinedFile" RefBaseClassPath="VDMA66415InterfaceClassLib/DeviceUserDefinedFile">
+				<Attribute AttributeDataType="xs:anyURI" Name="refURI"/>
+			</ExternalInterface>
+			<SupportedRoleClass RefRoleClassPath="VDMA66415RoleClassLib/VDMA66415/Device"/>
+		</SystemUnitClass>
+		<SystemUnitClass Name="DeviceFunction" RefBaseClassPath="VDMASystemUnitClassLib/VDMA66415BaseObject">
+			<Attribute AttributeDataType="xs:string" Name="Identifier">
+				<Description>Identifizierung der Gerätefunktion</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSign">
+				<Description>Referenzkennzeichen der Gerätefunktion, einheitlich/gemeinsam für alle Gewerke</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignM">
+				<Description>Referenzkennzeichen der Gerätefunktion: speziell Mechanik (Bauteilkennzeichen)</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignBMK">
+				<Description>Referenzkennzeichen der Gerätefunktion: speziell Elektrotechnik (Betriebsmittelkennzeichen)</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignFP">
+				<Description>Referenzkennzeichen der Gerätefunktion: speziell Fluidtechnik (Bezeichnungsschlüssel)</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceFunctionSignPI">
+				<Description>Referenzkennzeichen der Gerätefunktion: speziell Prozesstechnik (Mess- und Regelstellenkennzeichen)</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceFunctionText">
+				<Description>Name der Gerätefunktion (Funktionstext)</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceFunctionTextShort">
+				<Description>Name der Gerätefunktion (Funktionstext) in Kurzform</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="TypeSensor">
+				<Description>Funktionstyp Sensor, Erfassen</Description>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeSensorSignal"/>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeSensorValue"/>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="TypeSensorBinary">
+				<Description>Binäres Sensor-Signal</Description>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeLogicControl"/>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeLogicCommunication"/>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="TypeSensorValue">
+				<Description>Messwert</Description>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorSignal"/>
+				<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorValue"/>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="TypeLogic">
+				<Description>Funktionstyp Logik, Auswerten</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="TypeLogicControl">
+				<Description>Steuerung</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="TypeLogicCommunication">
+				<Description>Kommunikation</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="TypeActuator">
+				<Description>Funktionstyp Aktor, Reagieren</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorBinary">
+				<Description>Binäres Aktors-Signal</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="TypeActuatorValue">
+				<Description>Sollwert, Stellwert</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="TypeConnection">
+				<Description>Verbindung</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="TypeAccessory">
+				<Description>Zubehör</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="RelatedMechanicalDrawing">
+				<Description>Gerätefunktion relevant für Mechanik-CAD (Konstruktionszeichnung)</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="RelatedElectricalDiagram">
+				<Description>Gerätefunktion relevant für Elektro-CAD (Schaltplan)</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="RelatedFluidPowerDiagram">
+				<Description>Gerätefunktion relevant für Fluid-CAD (Fluidplan)</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="RelatedPIDiagram">
+				<Description>Gerätefunktion relevant für Prozess-CAD (R&amp;I-Fließschema)</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="RelatedSoftware">
+				<Description>Gerätefunktion relevant für Programmiersoftware</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:boolean" Name="RelatedSoftwareSafetyIO">
+				<Description>Gerätefunktion relevant für sicherheitsgerichtete Programmiersoftware</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="ConnectionSource">
+				<Description>Anschlussquelle der Gerätefunktion</Description>
+				<Attribute AttributeDataType="xs:string" Name="ConnectionSign">
+					<Description>Referenzkennzeichen der Anschlussquelle</Description>
+				</Attribute>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="ConnectionDestination">
+				<Description>Anschlussziel der Gerätefunktion</Description>
+				<Attribute AttributeDataType="xs:string" Name="ConnectionSign">
+					<Description>Referenzkennzeichen des Anschlusszieles</Description>
+				</Attribute>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="SafetyFunctionName">
+				<Description>Sicherheitsfunktion, in der die Gerätefunktion verwendet wird</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="SpanOfControlName">
+				<Description>Name des Maschinenbereiches, in dem die Gerätefunktion eingebunden ist (Wirkungsbereich)</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceFunctionUserDefinedText">
+				<Description>Informationen des Anwenders zur Gerätefunktion</Description>
+			</Attribute>
+			<Attribute AttributeDataType="xs:string" Name="DeviceFunctionParameterUser">
+				<Description>Anwendungsspezifischer Parameter der Gerätefunktion</Description>
+				<Attribute AttributeDataType="xs:string" Name="ParameterBuilt">
+					<Description>Eindeutiger Name des Autors, der den Parameter einträgt (Engineeringwerkzeug oder Autorenkürzel)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParamterName">
+					<Description>Name des Parameters</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterKey">
+					<Description>Schlüssel des Parameters (z.B. IRDI)</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterValue">
+					<Description>Wert des Parameters</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterDataType">
+					<Description>Datentyp des Parameters</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterSIUnit">
+					<Description>SI Einheit des Parameters</Description>
+				</Attribute>
+				<Attribute AttributeDataType="xs:string" Name="ParameterDescription">
+					<Description>Beschreibung des Parameters</Description>
+				</Attribute>
+			</Attribute>
+			<SupportedRoleClass RefRoleClassPath="VDMA66415RoleClassLib/VDMA66415/DeviceFunction"/>
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+</CAEXFile>

@@ -1,0 +1,142 @@
+{
+  "provision": {
+    "content": [
+      {
+        "mood": 2,
+        "timestamp": 1523485693,
+        "id": 650
+      },
+      {
+        "mood": 3,
+        "timestamp": 1523536838,
+        "id": 652
+      },
+      {
+        "mood": 1,
+        "timestamp": 1523638563,
+        "id": 655
+      },
+      {
+        "mood": 1,
+        "timestamp": 1251460800,
+        "id": 657
+      },
+      {
+        "mood": 2,
+        "timestamp": 1523963993,
+        "id": 704
+      },
+      {
+        "mood": 2,
+        "timestamp": 1524293945,
+        "id": 1087
+      },
+      {
+        "mood": 4,
+        "timestamp": 1524293946,
+        "id": 1089
+      },
+      {
+        "mood": 4,
+        "timestamp": 1524293956,
+        "id": 1092
+      },
+      {
+        "mood": 1,
+        "timestamp": 1525087852,
+        "id": 2532
+      },
+      {
+        "mood": 2,
+        "timestamp": 1525245279,
+        "id": 2762
+      },
+      {
+        "mood": 3,
+        "timestamp": 1525003200,
+        "id": 2764
+      },
+      {
+        "mood": 1,
+        "timestamp": 1525356255,
+        "id": 2940
+      },
+      {
+        "mood": 1,
+        "timestamp": 1527497230,
+        "id": 23318
+      },
+      {
+        "mood": 1,
+        "timestamp": 1528286400,
+        "id": 30131
+      },
+      {
+        "mood": 1,
+        "timestamp": 1528632000,
+        "id": 32510
+      },
+      {
+        "mood": 2,
+        "timestamp": 1531814204,
+        "id": 47951
+      },
+      {
+        "mood": 1,
+        "timestamp": 1533384000,
+        "id": 55159
+      },
+      {
+        "mood": 1,
+        "timestamp": 1533384000,
+        "id": 55160
+      },
+      {
+        "mood": 1,
+        "timestamp": 1535662455,
+        "id": 70522
+      },
+      {
+        "mood": 1,
+        "timestamp": 1534766400,
+        "id": 70524
+      },
+      {
+        "mood": 1,
+        "timestamp": 1543183507,
+        "id": 139924
+      },
+      {
+        "mood": 1,
+        "timestamp": 1546724359,
+        "id": 171923
+      },
+      {
+        "mood": 3,
+        "timestamp": 1546862400,
+        "id": 174301
+      },
+      {
+        "mood": 2,
+        "timestamp": 1548976070,
+        "id": 196737
+      },
+      {
+        "mood": 3,
+        "timestamp": 1550791400,
+        "id": 234621
+      },
+      {
+        "mood": 5,
+        "timestamp": 1551873600,
+        "id": 259057
+      }
+    ],
+    "usage-policy": "\n<http://w3id.org/semcon/ns/ontology#UsagePolicy> {\n  <http://w3id.org/semcon/ns/ontology#ContainerPolicy> a <http://www.w3.org/2002/07/owl#Class>;\n    <http://www.w3.org/2002/07/owl#equivalentClass> [\n    a <http://www.w3.org/2002/07/owl#Class>;\n    <http://www.w3.org/2002/07/owl#intersectionOf> ([\n    a <http://www.w3.org/2002/07/owl#Restriction>;\n    <http://www.w3.org/2002/07/owl#onProperty> <http://www.specialprivacy.eu/langs/usage-policy#hasData>;\n    <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.specialprivacy.eu/vocabs/data#Financial>\n    ] [\n    a <http://www.w3.org/2002/07/owl#Restriction>;\n    <http://www.w3.org/2002/07/owl#onProperty> <http://www.specialprivacy.eu/langs/usage-policy#hasProcessing>;\n    <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.specialprivacy.eu/langs/usage-policy#AnyProcessing>\n    ] [\n    a <http://www.w3.org/2002/07/owl#Restriction>;\n    <http://www.w3.org/2002/07/owl#onProperty> <http://www.specialprivacy.eu/langs/usage-policy#hasPurpose>;\n    <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.specialprivacy.eu/langs/usage-policy#AnyPurpose>\n    ] [\n    a <http://www.w3.org/2002/07/owl#Restriction>;\n    <http://www.w3.org/2002/07/owl#onProperty> <http://www.specialprivacy.eu/langs/usage-policy#hasRecipient>;\n    <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.specialprivacy.eu/langs/usage-policy#AnyRecipient>\n    ] [\n    a <http://www.w3.org/2002/07/owl#Restriction>;\n    <http://www.w3.org/2002/07/owl#onProperty> <http://www.specialprivacy.eu/langs/usage-policy#hasStorage>;\n    <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.specialprivacy.eu/langs/usage-policy#AnyStorage>\n    ])\n    ] .\n}\n",
+    "provenance": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n@prefix void: <http://rdfs.org/ns/void#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix sc: <http://w3id.org/semcon/ns/ontology#> .\n@prefix scr: <http://w3id.org/semcon/resource/> .\n\nscr:data_26c5492fd593_923e9118 a prov:Entity;\n    sc:dataHash \"26c5492fd593653a6423ce0b3dbabc0f4c5e79b9476ef1dc849427cde6cd4f6a\"^^xsd:string;\n    rdfs:label \"data set from 2019-08-27T07:17:50Z\"^^xsd:string;\n    prov:wasAttributedTo scr:container_923e9118-f2f6;\n    prov:generatedAtTime \"2019-08-27T07:17:50Z\"^^xsd:dateTime;\n.\n\nscr:container_923e9118-f2f6 a prov:softwareAgent;\n    sc:containerInstanceId \"923e9118-f2f6-489a-9e16-c686f1127500\"^^xsd:string;\n    sc:imageHash \"4606fb28326c3e6b4f3812299e6510706ec70d0b735b1bcbd0350e0866c99198\"^^xsd:string;\n    rdfs:label \"Step Count Container\"^^xsd:string;\n    rdfs:comment \"This container contains information about step count\"^^xsd:string;\n    prov:actedOnBehalfOf scr:operator_2397660539f0;\n.\n\nscr:operator_2397660539f0 a foaf:Person, prov:Person;\n    sc:operatorHash \"2397660539f0c36dc8bfcf24dbc11834a79579ee34395cf517500c0911487741\"^^xsd:string;\n    foaf:name \"Christoph Fabianek\";\n    foaf:mbox <mailto:christoph.fabianek@gmail.com>;\n.\n\nscr:input_26c5492fd593 a prov:Activity;\n    sc:inputHash \"26c5492fd593653a6423ce0b3dbabc0f4c5e79b9476ef1dc849427cde6cd4f6a\"^^xsd:string;\n    rdfs:label \"input data from 2019-08-15T22:33:12Z\"^^xsd:string;\n    prov:startedAtTime \"2019-08-15T22:33:12Z\"^^xsd:dateTime;\n    prov:endedAtTime \"2019-08-15T22:33:12Z\"^^xsd:dateTime;\n    prov:generated scr:data_26c5492fd593_923e9118;\n."
+  },
+  "validation": {
+    "hash": "69370b9ab7f01942aba0980ddcac9001f8e40d237bad1817d899a2a935eaf1fc",
+    "dlt-reference": "https://notary.ownyourdata.eu/en?hash=69370b9ab7f01942aba0980ddcac9001f8e40d237bad1817d899a2a935eaf1fc"
+  }
+}

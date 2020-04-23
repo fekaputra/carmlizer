@@ -1,0 +1,109 @@
+@prefix rr:     <http://www.w3.org/ns/r2rml#> .
+@prefix rml:    <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql:     <http://semweb.mmlab.be/ns/ql#> .
+@prefix carml:  <http://carml.taxonic.com/carml/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterm: <http://purl.org/dc/terms/> .
+@prefix xes:    <http://semantics.id/ns/xes#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix locn:   <http://www.w3.org/ns/locn#> .
+@prefix geo:    <http://www.opengis.net/ont/geosparql#> .
+
+@prefix :  <http://w3id.org/semcon/ns/oyd-example#> .
+
+@prefix func:   <http://semantics.id/ns/function#> .
+@prefix param:   <http://semantics.id/ns/parameter#> .
+@prefix fnml:    <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno:     <http://semweb.datasciencelab.be/ns/function#> .
+
+<#trace> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.provision.content.[*]" ;
+    ];
+    rr:subjectMap [
+        rr:template "http://w3id.org/semcon/id/oyd-location/{timestamp}";
+        rr:class :OydLocation
+    ];
+    rr:predicateObjectMap [
+        rr:predicate :accuracy ;
+        rr:objectMap [
+            rml:reference "accuracy" ;
+            rr:datatype xsd:float ;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate :speed ;
+        rr:objectMap [
+            rml:reference "speed" ;
+            rr:datatype xsd:float ;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate :altitude ;
+        rr:objectMap [
+            rml:reference "altitude" ;
+            rr:datatype xsd:float ;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate locn:geometry ;
+        rr:objectMap [
+            rr:parentTriplesMap <#geometry>
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate :dateTime ;
+        rr:objectMap <#getTime> ;
+    ];
+.
+
+<#getTime>
+ 	rr:termType rr:Literal ;
+ 	rr:datatype xsd:dateTime;
+ 	fnml:functionValue [
+        rr:subjectMap [
+            rr:template "http://w3id.org/semcon/id/oyd-location/{timestamp}";
+        ];
+        rr:predicateObjectMap [
+            rr:predicate fno:executes;
+            rr:object func:timeConversion;
+        ];
+        rr:predicateObjectMap [
+            rr:predicate param:time;
+            rr:objectMap [
+                rml:reference "timestamp";
+                rr:datatype xsd:string;
+            ]
+        ];
+        rr:predicateObjectMap [
+            rr:predicate param:timeFormat;
+            rr:objectMap [
+                rr:template "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+                rr:datatype xsd:string;
+            ]
+        ];
+    ]
+.
+
+<#geometry>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.provision.content.[*]" ;
+    ];
+    rr:subjectMap [
+        rr:template "http://w3id.org/semcon/id/oyd-location/{longitude}/{latitude}" ;
+        rr:class locn:Geometry
+    ];
+    rr:predicateObjectMap [
+        rr:predicate geo:asWKT ;
+        rr:objectMap [
+            rr:template "Point({longitude} {latitude})" ;
+            rr:datatype geo:wktLiteral ;
+        ];
+    ];
+.
