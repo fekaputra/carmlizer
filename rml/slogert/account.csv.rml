@@ -1,0 +1,89 @@
+#device,account,AccountService
+#Client1,jdoe,ubuntu
+#Client1,ftp_jdoe,ftp
+#Client1,ftp_admin,ftp
+
+@prefix carml:  <http://carml.taxonic.com/carml/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix fno:     <http://semweb.datasciencelab.be/ns/function#> .
+@prefix fnml:    <http://semweb.mmlab.be/ns/fnml#> .
+@prefix func:   <http://cityspin.net/ns/function/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@prefix core: <http://w3id.org/sepses/log/core#> .
+@prefix : <http://w3id.org/sepses/slogert/> .
+
+
+<#account-map>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "http://w3id.org/sepses/slogert/{device}.{account}";
+        rr:class core:Account ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:template "{device}.{account}";
+            rr:datatype xsd:string
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:hasAccountService ;
+        rr:objectMap [
+             rr:template "http://w3id.org/sepses/slogert/{device}.{AccountService}";
+             rr:class core:AccountService ;
+        ];
+    ];
+.
+
+
+<#hasAccountService-map>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "{device}-{account}-{AccountService}";
+        rr:termType rr:BlankNode ;
+        rr:class rdf:Statement ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/slogert/{device}.{account}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/log/core#hasAccountService";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rr:objectMap [
+             rr:template "http://w3id.org/sepses/slogert/{device}.{AccountService}";
+             rr:class :AccountService ;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validFrom ;
+        rr:objectMap [
+            rml:reference "validFrom";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validUntil;
+        rr:objectMap [
+            rml:reference "validUntil";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+.

@@ -1,0 +1,89 @@
+#Person,label,device,hasUserAccount,validFrom,validUntil
+#JohnDoe,John Doe,Client1,jdoe,2020-03-18T00:00:00,2020-03-18T00:01:00
+#JohnDoe,John Doe,Client1,ftp_jdoe,2020-03-18T00:00:00,2020-03-18T00:01:00
+#JohnDoe,John Doe,Client1,ftp_admin,2020-03-18T00:00:00,2020-03-18T00:01:00
+
+@prefix carml:  <http://carml.taxonic.com/carml/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix fno:     <http://semweb.datasciencelab.be/ns/function#> .
+@prefix fnml:    <http://semweb.mmlab.be/ns/fnml#> .
+@prefix func:   <http://cityspin.net/ns/function/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@prefix core: <http://w3id.org/sepses/log/core#> .
+@prefix : <http://w3id.org/sepses/slogert/> .
+
+
+<#person-map>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "http://w3id.org/sepses/slogert/{Person}";
+        rr:class core:Person ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:template "{label}";
+            rr:datatype xsd:string
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:hasUserAccount ;
+        rr:objectMap [
+             rr:template "http://w3id.org/sepses/slogert/{device}.{hasUserAccount}";
+             rr:class core:Account ;
+        ];
+    ];
+.
+
+
+<#hasUserAccount-map>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "{Person}-{device}-{hasUserAccount}";
+        rr:termType rr:BlankNode ;
+        rr:class rdf:Statement ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/slogert/{Person}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/log/core#hasUserAccount";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rr:objectMap [
+             rr:template "http://w3id.org/sepses/slogert/{device}.{hasUserAccount}";
+             rr:class :AccountService ;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validFrom ;
+        rr:objectMap [
+            rml:reference "validFrom";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validUntil;
+        rr:objectMap [
+            rml:reference "validUntil";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+.

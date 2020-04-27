@@ -1,0 +1,176 @@
+@prefix carml:  <http://carml.taxonic.com/carml/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix fno:     <http://semweb.datasciencelab.be/ns/function#> .
+@prefix fnml:    <http://semweb.mmlab.be/ns/fnml#> .
+@prefix func:   <http://cityspin.net/ns/function/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix core: <http://w3id.org/sepses/log/core#> .
+@prefix : <http://w3id.org/sepses/slogert/> .
+
+
+<#client-map>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "http://w3id.org/sepses/slogert/{Device}";
+        rr:class core:Client ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:assignedHost;
+        rr:objectMap [
+            rml:reference "assignedHost" ;
+            rr:datatype xsd:string ;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:hasIp;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/slogert/{dhcpLease}" ;
+            rr:class core:Ip ;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:hasLocalService;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/slogert/{Device}.{LocalService}" ;
+            rr:class core:Service ;
+        ];
+    ];
+.
+<#assignedHost-map>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "{Device}-{assignedHost}";
+        rr:termType rr:BlankNode ;
+        rr:class rdf:Statement ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rr:objectMap [
+        rr:template "http://w3id.org/sepses/slogert/{Device}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/log/core#assignedHost";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rr:objectMap [
+            rml:reference "assignedHost" ;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validFrom ;
+        rr:objectMap [
+            rml:reference "validFrom";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validUntil;
+        rr:objectMap [
+            rml:reference "validUntil";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+.
+<#hasIp-map>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "{Device}-{dhcpLease}";
+        rr:termType rr:BlankNode ;
+        rr:class rdf:Statement ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rr:objectMap [
+        rr:template "http://w3id.org/sepses/slogert/{Device}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/log/core#hasIp";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/slogert/{dhcpLease}" ;
+            rr:class core:Ip ;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validFrom ;
+        rr:objectMap [
+            rml:reference "validFrom";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validUntil;
+        rr:objectMap [
+            rml:reference "validUntil";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+.
+<#hasLocalService-map>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "{Device}-{Device}-{LocalService}";
+        rr:termType rr:BlankNode ;
+        rr:class rdf:Statement ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rr:objectMap [
+        rr:template "http://w3id.org/sepses/slogert/{Device}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/log/core#hasLocalService";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/slogert/{Device}.{LocalService}" ;
+            rr:class core:Ip ;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validFrom ;
+        rr:objectMap [
+            rml:reference "validFrom";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validUntil;
+        rr:objectMap [
+            rml:reference "validUntil";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+.
+
