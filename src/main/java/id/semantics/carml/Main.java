@@ -17,41 +17,45 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
+        String inputFile = "./input/slogert/account.csv";
+        String outputFile = "./output/slogert-account.ttl";
+        String rmlFile = "./rml/slogert/account.csv.rml";
+        String rmlType = "csv";
+        executeConversion(inputFile, rmlType, rmlFile, outputFile);
+
+        inputFile = "./input/slogert/client.csv";
+        outputFile = "./output/slogert-client.ttl";
+        rmlFile = "./rml/slogert/client.csv.rml";
+        rmlType = "csv";
+        executeConversion(inputFile, rmlType, rmlFile, outputFile);
+
+        inputFile = "./input/slogert/network.csv";
+        outputFile = "./output/slogert-network.ttl";
+        rmlFile = "./rml/slogert/network.csv.rml";
+        rmlType = "csv";
+        executeConversion(inputFile, rmlType, rmlFile, outputFile);
+
+        inputFile = "./input/slogert/person.csv";
+        outputFile = "./output/slogert-person.ttl";
+        rmlFile = "./rml/slogert/person.csv.rml";
+        rmlType = "csv";
+        executeConversion(inputFile, rmlType, rmlFile, outputFile);
+
+        inputFile = "./input/slogert/service.csv";
+        outputFile = "./output/slogert-service.ttl";
+        rmlFile = "./rml/slogert/service.csv.rml";
+        rmlType = "csv";
+        executeConversion(inputFile, rmlType, rmlFile, outputFile);
+
+    }
+
+    public static void executeConversion(String inputFile, String rmlType, String rmlFile, String outputFile)
+            throws IOException {
+
         log.info("Main process started");
 
         long start = System.currentTimeMillis();
 
-        //        String inputFile = "./input/weather.csv";
-        //        String outputFile = "./output/weather.ttl";
-        //        String rmlFile = "./rml/weather.rml.ttl";
-        //        String rmlType = "csv";
-        //
-        //        String inputFile = "./input/slogert/account.csv";
-        //        String outputFile = "./output/slogert-account.ttl";
-        //        String rmlFile = "./rml/slogert/account.csv.rml";
-        //        String rmlType = "csv";
-
-        //        String inputFile = "./input/slogert/client.csv";
-        //        String outputFile = "./output/slogert-client.ttl";
-        //        String rmlFile = "./rml/slogert/client.csv.rml";
-        //        String rmlType = "csv";
-
-        //        String inputFile = "./input/slogert/network.csv";
-        //        String outputFile = "./output/slogert-network.ttl";
-        //        String rmlFile = "./rml/slogert/network.csv.rml";
-        //        String rmlType = "csv";
-
-//        String inputFile = "./input/slogert/person.csv";
-//        String outputFile = "./output/slogert-person.ttl";
-//        String rmlFile = "./rml/slogert/person.csv.rml";
-//        String rmlType = "csv";
-
-        String inputFile = "./input/slogert/service.csv";
-        String outputFile = "./output/slogert-service.ttl";
-        String rmlFile = "./rml/slogert/service.csv.rml";
-        String rmlType = "csv";
-
-        // start carmlizer
         conversion(inputFile, rmlType, rmlFile, outputFile);
 
         // transform to RDF*
@@ -59,7 +63,6 @@ public class Main {
         rdf2RDFStar.convert(outputFile, new FileOutputStream(outputFile + "star.ttl"));
 
         log.info("Main process is done in '" + (System.currentTimeMillis() - start) / 1000 + "' seconds");
-
     }
 
     public static void conversion(String inputFile, String rmlType, String rmlFile, String outputFile)
