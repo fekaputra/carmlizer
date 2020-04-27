@@ -1,0 +1,7 @@
+<http://w3id.org/sepses/slogert/Client1.ubuntu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/sepses/log/core#Service> . 
+<http://w3id.org/sepses/slogert/Client1.ftp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/sepses/log/core#Service> ;
+                                             <http://w3id.org/sepses/log/core#hasIp> <http://w3id.org/sepses/slogert/10.0.0.1> ;
+                                             <http://w3id.org/sepses/log/core#hasParentService> <http://w3id.org/sepses/slogert/Client1.ubuntu> ;
+                                             <http://w3id.org/sepses/log/core#hasPort> <http://w3id.org/sepses/slogert/Port.21> . 
+<<<http://w3id.org/sepses/slogert/Client1.ftp> <http://w3id.org/sepses/log/core#hasIp> <http://w3id.org/sepses/slogert/10.0.0.1>>> <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
+<<<http://w3id.org/sepses/slogert/Client1.ftp> <http://w3id.org/sepses/log/core#hasPort> <http://w3id.org/sepses/slogert/Port.21>>> <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .

@@ -1,0 +1,42 @@
+
+<http://w3id.org/sepses/slogert/Client1> a <http://w3id.org/sepses/log/core#Client>;
+  <http://w3id.org/sepses/log/core#assignedHost> "SepsesNetwork.Client1";
+  <http://w3id.org/sepses/log/core#hasIp> <http://w3id.org/sepses/slogert/10.0.0.1>,
+    <http://w3id.org/sepses/slogert/10.0.0.2>;
+  <http://w3id.org/sepses/log/core#hasLocalService> <http://w3id.org/sepses/slogert/Client1.ftp>,
+    <http://w3id.org/sepses/slogert/Client1.ubuntu> .
+
+_:bnode-Client1-SepsesNetworkClient1 a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement>;
+  <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://w3id.org/sepses/log/core#validUntil> "2020-03-18T00:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> "SepsesNetwork.Client1";
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://w3id.org/sepses/log/core#assignedHost>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://w3id.org/sepses/slogert/Client1> .
+
+_:bnode-Client1-10001 a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement>;
+  <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://w3id.org/sepses/log/core#validUntil> "2020-03-18T00:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://w3id.org/sepses/slogert/10.0.0.1>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://w3id.org/sepses/log/core#hasIp>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://w3id.org/sepses/slogert/Client1> .
+
+_:bnode-Client1-10002 a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement>;
+  <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://w3id.org/sepses/log/core#validUntil> "2020-03-18T00:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://w3id.org/sepses/slogert/10.0.0.2>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://w3id.org/sepses/log/core#hasIp>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://w3id.org/sepses/slogert/Client1> .
+
+_:bnode-Client1-Client1-ubuntu a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement>;
+  <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://w3id.org/sepses/log/core#validUntil> "2020-03-18T00:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://w3id.org/sepses/slogert/Client1.ubuntu>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://w3id.org/sepses/log/core#hasLocalService>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://w3id.org/sepses/slogert/Client1> .
+
+_:bnode-Client1-Client1-ftp a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement>;
+  <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://w3id.org/sepses/log/core#validUntil> "2020-03-18T00:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://w3id.org/sepses/slogert/Client1.ftp>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://w3id.org/sepses/log/core#hasLocalService>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://w3id.org/sepses/slogert/Client1> .
