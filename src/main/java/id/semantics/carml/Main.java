@@ -19,10 +19,10 @@ public class Main {
 
         long start = System.currentTimeMillis();
 
-        String inputFile = "./input/aml_vdma.aml";
-        String outputFile = "./output/aml_vdma.ttl";
-        String rmlFile = "./rml/aml.rml";
-        String rmlType = "xml";
+        String inputFile = "./input/weather.csv";
+        String outputFile = "./output/weather.ttl";
+        String rmlFile = "./rml/weather.rml.ttl";
+        String rmlType = "csv";
 
         // start carmlizer
         conversion(inputFile, rmlType, rmlFile, outputFile);

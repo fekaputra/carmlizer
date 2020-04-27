@@ -1,0 +1,74 @@
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix carml:  <http://carml.taxonic.com/carml/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix om:<https://www.w3.org/ns/sosa/om#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix qb:      <http://purl.org/linked-data/cube#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix fno:     <http://semweb.datasciencelab.be/ns/function#> .
+@prefix fnml:    <http://semweb.mmlab.be/ns/fnml#> .
+@prefix func:   <http://cityspin.net/ns/function/> .
+@prefix om2:<http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix : <https://w3id.org/cityspin/ontology/> .
+
+<#DatasetMapping>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "https://w3id.org/cityspin/id/weather/city-weather";
+        rr:class qb:DataSet ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dct:title;
+        rr:objectMap [
+            rr:template "CityWeatherDS";
+            rr:datatype xsd:string
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate qb:structure;
+        rr:objectMap [
+            rr:template "https://w3id.org/cityspin/ontology/WeatherMeasurement" ;
+            rr:termType rr:IRI ;
+        ];
+    ];
+.
+
+<#temp7>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate qb:dataSet;
+        rr:objectMap [
+            rr:template "https://w3id.org/cityspin/id/weather/city-weather";
+            rr:termType rr:IRI ;
+        ];
+    ];
+    rr:subjectMap [
+        rr:template "https://w3id.org/cityspin/id/weather/city-{year}-{month}-{day}T07";
+        rr:class qb:Observation ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate :timeDimension;
+        rr:objectMap [
+             rr:template "https://w3id.org/cityspin/id/time/{year}{month}{day}T07";
+             rr:class :HourInstant ;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate :airTemperature;
+        rr:objectMap [ rml:reference "temp_7h";
+            rr:datatype xsd:decimal ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate :humidity;
+        rr:objectMap [ rml:reference "hum_7h";
+            rr:datatype xsd:decimal ];
+    ];
+.
