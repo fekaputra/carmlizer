@@ -1,11 +1,15 @@
+@prefix core: <http://w3id.org/sepses/log/core#> .
+@prefix ex: <http://w3id.org/sepses/slogert/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/sepses/slogert/SepsesNetwork> a <http://w3id.org/sepses/log/core#Network>;
-  <http://w3id.org/sepses/log/core#hasRegisteredDevice> <http://w3id.org/sepses/slogert/Client1>;
+ex:SepsesNetwork a core:Network;
+  core:hasRegisteredDevice ex:Client1;
   <http://www.w3.org/2000/01/rdf-schema#label> "SepsesNetwork" .
 
-_:bnode-SepsesNetwork-Client1 a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement>;
-  <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-  <http://w3id.org/sepses/log/core#validUntil> "2020-03-18T00:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-  <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://w3id.org/sepses/slogert/Client1>;
-  <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://w3id.org/sepses/log/core#hasRegisteredDevice>;
-  <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://w3id.org/sepses/slogert/SepsesNetwork> .
+_:bnode-SepsesNetwork-Client1 a rdf:Statement;
+  core:validFrom "2020-03-18T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-18T00:01:00"^^xsd:dateTime;
+  rdf:object ex:Client1;
+  rdf:predicate core:hasRegisteredDevice;
+  rdf:subject ex:SepsesNetwork .

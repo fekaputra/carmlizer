@@ -1,15 +1,19 @@
-<http://w3id.org/sepses/slogert/Client1.jdoe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/sepses/log/core#Account> ;
-                                              <http://w3id.org/sepses/log/core#hasAccountService> <http://w3id.org/sepses/slogert/Client1.ubuntu> ;
-                                              <http://www.w3.org/2000/01/rdf-schema#label> "Client1.jdoe" . 
-<http://w3id.org/sepses/slogert/Client1.ftp_jdoe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/sepses/log/core#Account> ;
-                                                  <http://w3id.org/sepses/log/core#hasAccountService> <http://w3id.org/sepses/slogert/Client1.ftp> ;
-                                                  <http://www.w3.org/2000/01/rdf-schema#label> "Client1.ftp_jdoe" . 
-<http://w3id.org/sepses/slogert/Client1.ftp_admin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/sepses/log/core#Account> ;
-                                                   <http://w3id.org/sepses/log/core#hasAccountService> <http://w3id.org/sepses/slogert/Client1.ftp> ;
-                                                   <http://www.w3.org/2000/01/rdf-schema#label> "Client1.ftp_admin" . 
-<<<http://w3id.org/sepses/slogert/Client1.jdoe> <http://w3id.org/sepses/log/core#hasAccountService> <http://w3id.org/sepses/slogert/Client1.ubuntu>>> <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-                                                                                                                                                      <http://w3id.org/sepses/log/core#validUntil> "2020-03-18T00:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
-<<<http://w3id.org/sepses/slogert/Client1.ftp_jdoe> <http://w3id.org/sepses/log/core#hasAccountService> <http://w3id.org/sepses/slogert/Client1.ftp>>> <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-                                                                                                                                                       <http://w3id.org/sepses/log/core#validUntil> "2020-03-18T00:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
-<<<http://w3id.org/sepses/slogert/Client1.ftp_admin> <http://w3id.org/sepses/log/core#hasAccountService> <http://w3id.org/sepses/slogert/Client1.ftp>>> <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-                                                                                                                                                        <http://w3id.org/sepses/log/core#validUntil> "2020-03-18T00:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+@prefix core:  <http://w3id.org/sepses/log/core#> .
+@prefix ex:    <http://w3id.org/sepses/slogert/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+ex:Client1.jdoe rdf:type core:Account ;
+                core:hasAccountService ex:Client1.ubuntu ;
+                <http://www.w3.org/2000/01/rdf-schema#label> "Client1.jdoe" . 
+ex:Client1.ftp_jdoe rdf:type core:Account ;
+                    core:hasAccountService ex:Client1.ftp ;
+                    <http://www.w3.org/2000/01/rdf-schema#label> "Client1.ftp_jdoe" . 
+ex:Client1.ftp_admin rdf:type core:Account ;
+                     core:hasAccountService ex:Client1.ftp ;
+                     <http://www.w3.org/2000/01/rdf-schema#label> "Client1.ftp_admin" . 
+<<ex:Client1.jdoe core:hasAccountService ex:Client1.ubuntu>> core:validFrom "2020-03-18T00:00:00"^^xsd:dateTime ;
+                                                             core:validUntil "2020-03-18T00:01:00"^^xsd:dateTime . 
+<<ex:Client1.ftp_jdoe core:hasAccountService ex:Client1.ftp>> core:validFrom "2020-03-18T00:00:00"^^xsd:dateTime ;
+                                                              core:validUntil "2020-03-18T00:01:00"^^xsd:dateTime . 
+<<ex:Client1.ftp_admin core:hasAccountService ex:Client1.ftp>> core:validFrom "2020-03-18T00:00:00"^^xsd:dateTime ;
+                                                               core:validUntil "2020-03-18T00:01:00"^^xsd:dateTime .

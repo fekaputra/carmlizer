@@ -1,26 +1,30 @@
+@prefix core: <http://w3id.org/sepses/log/core#> .
+@prefix ex: <http://w3id.org/sepses/slogert/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/sepses/slogert/JohnDoe> a <http://w3id.org/sepses/log/core#Person>;
-  <http://w3id.org/sepses/log/core#hasUserAccount> <http://w3id.org/sepses/slogert/Client1.ftp_admin>,
-    <http://w3id.org/sepses/slogert/Client1.ftp_jdoe>, <http://w3id.org/sepses/slogert/Client1.jdoe>;
+ex:JohnDoe a foaf:Person;
+  core:hasUserAccount ex:Client1.ftp_admin, ex:Client1.ftp_jdoe, ex:Client1.jdoe;
   <http://www.w3.org/2000/01/rdf-schema#label> "John Doe" .
 
-_:bnode-JohnDoe-Client1-jdoe a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement>;
-  <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-  <http://w3id.org/sepses/log/core#validUntil> "2020-03-18T00:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-  <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://w3id.org/sepses/slogert/Client1.jdoe>;
-  <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://w3id.org/sepses/log/core#hasUserAccount>;
-  <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://w3id.org/sepses/slogert/JohnDoe> .
+_:bnode-JohnDoe-Client1-jdoe a rdf:Statement;
+  core:validFrom "2020-03-18T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-18T00:01:00"^^xsd:dateTime;
+  rdf:object ex:Client1.jdoe;
+  rdf:predicate core:hasUserAccount;
+  rdf:subject ex:JohnDoe .
 
-_:bnode-JohnDoe-Client1-ftp_jdoe a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement>;
-  <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-  <http://w3id.org/sepses/log/core#validUntil> "2020-03-18T00:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-  <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://w3id.org/sepses/slogert/Client1.ftp_jdoe>;
-  <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://w3id.org/sepses/log/core#hasUserAccount>;
-  <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://w3id.org/sepses/slogert/JohnDoe> .
+_:bnode-JohnDoe-Client1-ftp_jdoe a rdf:Statement;
+  core:validFrom "2020-03-18T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-18T00:01:00"^^xsd:dateTime;
+  rdf:object ex:Client1.ftp_jdoe;
+  rdf:predicate core:hasUserAccount;
+  rdf:subject ex:JohnDoe .
 
-_:bnode-JohnDoe-Client1-ftp_admin a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement>;
-  <http://w3id.org/sepses/log/core#validFrom> "2020-03-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-  <http://w3id.org/sepses/log/core#validUntil> "2020-03-18T00:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
-  <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://w3id.org/sepses/slogert/Client1.ftp_admin>;
-  <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://w3id.org/sepses/log/core#hasUserAccount>;
-  <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://w3id.org/sepses/slogert/JohnDoe> .
+_:bnode-JohnDoe-Client1-ftp_admin a rdf:Statement;
+  core:validFrom "2020-03-18T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-18T00:01:00"^^xsd:dateTime;
+  rdf:object ex:Client1.ftp_admin;
+  rdf:predicate core:hasUserAccount;
+  rdf:subject ex:JohnDoe .
