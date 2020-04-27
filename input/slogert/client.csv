@@ -1,0 +1,4 @@
+Device,assignedHost,dhcpLease,LocalService,validFrom,validUntil
+Client1,SepsesNetwork.Client1,10.0.0.1,ubuntu,2020-03-18T00:00:00,2020-03-18T00:01:00
+Client1,SepsesNetwork.Client1,10.0.0.1,ftp,2020-03-18T00:00:00,2020-03-18T00:01:00
+Client1,SepsesNetwork.Client1,10.0.0.2,,2020-03-18T00:00:00,2020-03-18T00:01:00

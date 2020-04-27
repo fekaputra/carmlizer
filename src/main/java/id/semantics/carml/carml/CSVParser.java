@@ -6,46 +6,14 @@ import com.taxonic.carml.model.TriplesMap;
 import com.taxonic.carml.util.RmlMappingLoader;
 import com.taxonic.carml.vocab.Rdf;
 import id.semantics.carml.helper.CarmlFunctions;
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.riot.Lang;
-import org.apache.jena.riot.RDFDataMgr;
+import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.Rio;
 
 import java.io.*;
 import java.util.Set;
 
-import static id.semantics.carml.helper.Config.TEMP_FILE;
-import static id.semantics.carml.helper.Config.TEMP_FILE_SUFFIX;
-
 public class CSVParser {
-
-    /**
-     * transform CSV file with caRML and RML mappings, and return Jena Model
-     *
-     * @param csvFileName
-     * @param rmlFile
-     * @return
-     * @throws IOException
-     */
-    public static Model parse(String csvFileName, String rmlFile) throws IOException {
-
-        // create a temp file
-        File file = File.createTempFile(TEMP_FILE, TEMP_FILE_SUFFIX);
-        file.deleteOnExit();
-
-        // parse CSV file
-        parse(csvFileName, rmlFile, file.getPath());
-
-        // create jena model
-        Model model = ModelFactory.createDefaultModel();
-        InputStream tempInput = new FileInputStream(file);
-        RDFDataMgr.read(model, tempInput, Lang.TURTLE);
-        tempInput.close();
-
-        return model;
-    }
 
     /**
      * transform CSV file with caRML and RML mappings.
@@ -70,7 +38,7 @@ public class CSVParser {
         mapper.bindInputStream(instances);
 
         // write it out to an turtle file
-        org.eclipse.rdf4j.model.Model sesameModel = mapper.map(mapping);
+        Model sesameModel = mapper.map(mapping);
         is.close();
         instances.close();
 

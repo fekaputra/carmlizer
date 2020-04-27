@@ -66,13 +66,19 @@
             <version>${carml.version}</version>
         </dependency>
 
-        <!-- Apache Jena -->
         <dependency>
-            <groupId>org.apache.jena</groupId>
-            <artifactId>apache-jena</artifactId>
-            <version>${jena.version}</version>
-            <type>pom</type>
+            <groupId>se.liu.ida.rdfstar</groupId>
+            <artifactId>RDFstarTools</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <!--&lt;!&ndash; Apache Jena &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.jena</groupId>-->
+            <!--<artifactId>apache-jena</artifactId>-->
+            <!--<version>${jena.version}</version>-->
+            <!--<type>pom</type>-->
+        <!--</dependency>-->
 
         <!-- https://mvnrepository.com/artifact/commons-cli/commons-cli -->
         <dependency>

@@ -1,0 +1,4 @@
+Person,label,device,hasUserAccount,validFrom,validUntil
+JohnDoe,John Doe,Client1,jdoe,2020-03-18T00:00:00,2020-03-18T00:01:00
+JohnDoe,John Doe,Client1,ftp_jdoe,2020-03-18T00:00:00,2020-03-18T00:01:00
+JohnDoe,John Doe,Client1,ftp_admin,2020-03-18T00:00:00,2020-03-18T00:01:00

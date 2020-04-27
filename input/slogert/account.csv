@@ -1,0 +1,4 @@
+device,account,AccountService,validFrom,validUntil
+Client1,jdoe,ubuntu,2020-03-18T00:00:00,2020-03-18T00:01:00
+Client1,ftp_jdoe,ftp,2020-03-18T00:00:00,2020-03-18T00:01:00
+Client1,ftp_admin,ftp,2020-03-18T00:00:00,2020-03-18T00:01:00
