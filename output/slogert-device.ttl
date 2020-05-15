@@ -1,0 +1,81 @@
+@prefix core: <http://w3id.org/sepses/vocab/log/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sid: <http://w3id.org/sepses/id/slogert/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sid:Device_Client01 a core:Device;
+  core:assignedHost sid:Host_client1;
+  core:dhcpLease sid:Ip_10.0.0.6;
+  rdfs:label "Client01" .
+
+sid:Device_Client02 a core:Device;
+  core:assignedHost sid:Host_client2;
+  core:dhcpLease sid:Ip_10.0.0.12;
+  rdfs:label "Client02" .
+
+sid:Device_Client03 a core:Device;
+  core:assignedHost sid:Host_client3;
+  core:dhcpLease sid:Ip_10.0.0.1;
+  rdfs:label "Client03" .
+
+sid:Device_Server a core:Device;
+  core:assignedHost sid:Host_server;
+  core:dhcpLease sid:Ip_10.0.0.7;
+  rdfs:label "Server" .
+
+_:bnode-Client01-client1 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Host_client1;
+  rdf:predicate core:assignedHost;
+  rdf:subject sid:Device_Client01 .
+
+_:bnode-Client02-client2 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Host_client2;
+  rdf:predicate core:assignedHost;
+  rdf:subject sid:Device_Client02 .
+
+_:bnode-Client03-client3 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Host_client3;
+  rdf:predicate core:assignedHost;
+  rdf:subject sid:Device_Client03 .
+
+_:bnode-Server-server a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Host_server;
+  rdf:predicate core:assignedHost;
+  rdf:subject sid:Device_Server .
+
+_:bnode-Client01-10006 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Ip_10.0.0.6;
+  rdf:predicate core:dhcpLease;
+  rdf:subject sid:Device_Client01 .
+
+_:bnode-Client02-100012 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Ip_10.0.0.12;
+  rdf:predicate core:dhcpLease;
+  rdf:subject sid:Device_Client02 .
+
+_:bnode-Client03-10001 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Ip_10.0.0.1;
+  rdf:predicate core:dhcpLease;
+  rdf:subject sid:Device_Client03 .
+
+_:bnode-Server-10007 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Ip_10.0.0.7;
+  rdf:predicate core:dhcpLease;
+  rdf:subject sid:Device_Server .

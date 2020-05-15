@@ -1,30 +1,39 @@
-@prefix core: <http://w3id.org/sepses/log/core#> .
-@prefix ex: <http://w3id.org/sepses/slogert/> .
+@prefix core: <http://w3id.org/sepses/vocab/log/core#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sid: <http://w3id.org/sepses/id/slogert/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:JohnDoe a foaf:Person;
-  core:hasUserAccount ex:Client1.ftp_admin, ex:Client1.ftp_jdoe, ex:Client1.jdoe;
-  <http://www.w3.org/2000/01/rdf-schema#label> "John Doe" .
+sid:Person_JohnDoe a foaf:Person;
+  core:hasDevice sid:Device_Client01;
+  rdfs:label "John Doe" .
 
-_:bnode-JohnDoe-Client1-jdoe a rdf:Statement;
-  core:validFrom "2020-03-18T00:00:00"^^xsd:dateTime;
-  core:validUntil "2020-03-18T00:01:00"^^xsd:dateTime;
-  rdf:object ex:Client1.jdoe;
-  rdf:predicate core:hasUserAccount;
-  rdf:subject ex:JohnDoe .
+sid:Person_JaneHalley a foaf:Person;
+  core:hasDevice sid:Device_Client02;
+  rdfs:label "Jane Halley" .
 
-_:bnode-JohnDoe-Client1-ftp_jdoe a rdf:Statement;
-  core:validFrom "2020-03-18T00:00:00"^^xsd:dateTime;
-  core:validUntil "2020-03-18T00:01:00"^^xsd:dateTime;
-  rdf:object ex:Client1.ftp_jdoe;
-  rdf:predicate core:hasUserAccount;
-  rdf:subject ex:JohnDoe .
+sid:Person_AnnaKep a foaf:Person;
+  core:hasDevice sid:Device_Client03;
+  rdfs:label "Anna Kep" .
 
-_:bnode-JohnDoe-Client1-ftp_admin a rdf:Statement;
-  core:validFrom "2020-03-18T00:00:00"^^xsd:dateTime;
-  core:validUntil "2020-03-18T00:01:00"^^xsd:dateTime;
-  rdf:object ex:Client1.ftp_admin;
-  rdf:predicate core:hasUserAccount;
-  rdf:subject ex:JohnDoe .
+_:bnode-JohnDoe-Client01 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Client01;
+  rdf:predicate core:hasDevice;
+  rdf:subject sid:Person_JohnDoe .
+
+_:bnode-JaneHalley-Client02 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Client02;
+  rdf:predicate core:hasDevice;
+  rdf:subject sid:Person_JaneHalley .
+
+_:bnode-AnnaKep-Client03 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Client03;
+  rdf:predicate core:hasDevice;
+  rdf:subject sid:Person_AnnaKep .

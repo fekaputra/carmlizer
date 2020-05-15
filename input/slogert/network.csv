@@ -1,2 +1,5 @@
 Network,hasRegisteredDevice,validFrom,validUntil
-SepsesNetwork,Client1,2020-03-18T00:00:00,2020-03-18T00:01:00
+SepsesNetwork,Client1,2020-03-08T00:00:00,2020-03-14T23:59:00
+SepsesNetwork,Client2,2020-03-08T00:00:00,2020-03-14T23:59:00
+SepsesNetwork,Client3,2020-03-08T00:00:00,2020-03-14T23:59:00
+SepsesNetwork,Server,2020-03-08T00:00:00,2020-03-14T23:59:00

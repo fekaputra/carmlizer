@@ -1,0 +1,8 @@
+user,device,person,validFrom,validUntil
+jdoe,Client01,JohnDoe,2020-03-08T00:00:00,2020-03-14T23:59:00
+ftp_jdoe,Server,JohnDoe,2020-03-08T00:00:00,2020-03-14T23:59:00
+ftp_admin,Server,JohnDoe,2020-03-08T00:00:00,2020-03-14T23:59:00
+jhalley,Client02,JaneHalley,2020-03-08T00:00:00,2020-03-14T23:59:00
+ftp_jhalley,Server,JaneHalley,2020-03-08T00:00:00,2020-03-14T23:59:00
+akep,Client03,AnnaKep,2020-03-08T00:00:00,2020-03-14T23:59:00
+ftp_akep,Server,AnnaKep,2020-03-08T00:00:00,2020-03-14T23:59:00

@@ -1,0 +1,24 @@
+core:Network
+	rdfs:label : xsd:string
+	core:hasRegisteredDevice : core:Device >>
+	
+core:Device
+	rdfs:label : xsd:string
+	core:assignedHost : core:Host >>
+	core:dhcpLease : core:Ip >>
+
+core:Service
+	rdfs:label : xsd:string
+	core:hasPort : core:Port >>
+	core:onDevice : core:Device >> 
+
+core:User
+	rdfs:label : xsd:string
+	core:onDevice : core:Device >> 
+	core:ownedBy  : foaf:Person >>
+
+foaf:Person
+	rdfs:label : xsd:string
+	core:hasDevice : core:Device >>
+
+

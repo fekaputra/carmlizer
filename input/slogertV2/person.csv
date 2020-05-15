@@ -1,0 +1,4 @@
+Person,label,device,validFrom,validUntil
+JohnDoe,John Doe,Client01,2020-03-08T00:00:00,2020-03-14T23:59:00
+JaneHalley,Jane Halley,Client02,2020-03-08T00:00:00,2020-03-14T23:59:00
+AnnaKep,Anna Kep,Client03,2020-03-08T00:00:00,2020-03-14T23:59:00

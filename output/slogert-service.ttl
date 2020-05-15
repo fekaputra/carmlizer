@@ -1,23 +1,49 @@
-@prefix core: <http://w3id.org/sepses/log/core#> .
-@prefix ex: <http://w3id.org/sepses/slogert/> .
+@prefix core: <http://w3id.org/sepses/vocab/log/core#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sid: <http://w3id.org/sepses/id/slogert/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:Client1.ubuntu a core:Service .
+sid:Service_ubuntu a core:Service;
+  core:onDevice sid:Device_Client01, sid:Device_Client02, sid:Device_Client03;
+  rdfs:label "ubuntu" .
 
-ex:Client1.ftp a core:Service;
-  core:hasIp ex:10.0.0.1;
-  core:hasParentService ex:Client1.ubuntu;
-  core:hasPort ex:Port.21 .
+sid:Service_ftp a core:Service;
+  core:hasPort sid:Port_21;
+  core:onDevice sid:Device_Server;
+  rdfs:label "ftp" .
 
-_:bnode-Client1-ftp-10001 a rdf:Statement;
-  core:validFrom "2020-03-18T00:00:00"^^xsd:dateTime;
-  rdf:object ex:10.0.0.1;
-  rdf:predicate core:hasIp;
-  rdf:subject ex:Client1.ftp .
-
-_:bnode-Client1-ftp-21 a rdf:Statement;
-  core:validFrom "2020-03-18T00:00:00"^^xsd:dateTime;
-  rdf:object ex:Port.21;
+_:bnode-ftp-21 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Port_21;
   rdf:predicate core:hasPort;
-  rdf:subject ex:Client1.ftp .
+  rdf:subject sid:Service_ftp .
+
+_:bnode-ubuntu-Client01 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Client01;
+  rdf:predicate core:onDevice;
+  rdf:subject sid:Service_ubuntu .
+
+_:bnode-ubuntu-Client02 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Client02;
+  rdf:predicate core:onDevice;
+  rdf:subject sid:Service_ubuntu .
+
+_:bnode-ubuntu-Client03 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Client03;
+  rdf:predicate core:onDevice;
+  rdf:subject sid:Service_ubuntu .
+
+_:bnode-ftp-Server a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Server;
+  rdf:predicate core:onDevice;
+  rdf:subject sid:Service_ftp .

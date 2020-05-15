@@ -1,3 +1,7 @@
 Device,Service,ParentService,Ip,Port,validFrom,validUntil
 Client1,ubuntu,,,,2020-03-18T00:00:00,2020-03-18T00:01:00
-Client1,ftp,ubuntu,10.0.0.1,21,2020-03-18T00:00:00,
+Client1,ftp,ubuntu,10.0.0.6,21,2020-03-18T00:00:00
+Client2,ubuntu,,,,2020-03-18T00:00:00,2020-03-18T00:01:00
+Client2,ftp,ubuntu,10.0.0.12,21,2020-03-18T00:00:00
+Client2,ubuntu,,,,2020-03-18T00:00:00,2020-03-18T00:01:00
+Client3,ftp,ubuntu,10.0.0.3,21,2020-03-18T00:00:00

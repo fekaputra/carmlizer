@@ -1,15 +1,38 @@
-@prefix core: <http://w3id.org/sepses/log/core#> .
-@prefix ex: <http://w3id.org/sepses/slogert/> .
+@prefix core: <http://w3id.org/sepses/vocab/log/core#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sid: <http://w3id.org/sepses/id/slogert/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:SepsesNetwork a core:Network;
-  core:hasRegisteredDevice ex:Client1;
-  <http://www.w3.org/2000/01/rdf-schema#label> "SepsesNetwork" .
+sid:Network_Sepses a core:Network;
+  core:hasRegisteredDevice sid:Device_Client01, sid:Device_Client02, sid:Device_Client03,
+    sid:Device_Server;
+  rdfs:label "Sepses" .
 
-_:bnode-SepsesNetwork-Client1 a rdf:Statement;
-  core:validFrom "2020-03-18T00:00:00"^^xsd:dateTime;
-  core:validUntil "2020-03-18T00:01:00"^^xsd:dateTime;
-  rdf:object ex:Client1;
+_:bnode-Sepses-Client01 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Client01;
   rdf:predicate core:hasRegisteredDevice;
-  rdf:subject ex:SepsesNetwork .
+  rdf:subject sid:Network_Sepses .
+
+_:bnode-Sepses-Client02 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Client02;
+  rdf:predicate core:hasRegisteredDevice;
+  rdf:subject sid:Network_Sepses .
+
+_:bnode-Sepses-Client03 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Client03;
+  rdf:predicate core:hasRegisteredDevice;
+  rdf:subject sid:Network_Sepses .
+
+_:bnode-Sepses-Server a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Server;
+  rdf:predicate core:hasRegisteredDevice;
+  rdf:subject sid:Network_Sepses .

@@ -1,0 +1,140 @@
+@prefix core: <http://w3id.org/sepses/vocab/log/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sid: <http://w3id.org/sepses/id/slogert/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sid:User_jdoe a core:User;
+  core:onDevice sid:Device_Client01;
+  core:ownedBy sid:Person_JohnDoe;
+  rdfs:label "jdoe" .
+
+sid:User_ftp_jdoe a core:User;
+  core:onDevice sid:Device_Server;
+  core:ownedBy sid:Person_JohnDoe;
+  rdfs:label "ftp_jdoe" .
+
+sid:User_ftp_admin a core:User;
+  core:onDevice sid:Device_Server;
+  core:ownedBy sid:Person_JohnDoe;
+  rdfs:label "ftp_admin" .
+
+sid:User_jhalley a core:User;
+  core:onDevice sid:Device_Client02;
+  core:ownedBy sid:Person_JaneHalley;
+  rdfs:label "jhalley" .
+
+sid:User_ftp_jhalley a core:User;
+  core:onDevice sid:Device_Server;
+  core:ownedBy sid:Person_JaneHalley;
+  rdfs:label "ftp_jhalley" .
+
+sid:User_akep a core:User;
+  core:onDevice sid:Device_Client03;
+  core:ownedBy sid:Person_AnnaKep;
+  rdfs:label "akep" .
+
+sid:User_ftp_akep a core:User;
+  core:onDevice sid:Device_Server;
+  core:ownedBy sid:Person_AnnaKep;
+  rdfs:label "ftp_akep" .
+
+_:bnode-jdoe-JohnDoe a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Person_JohnDoe;
+  rdf:predicate core:ownedBy;
+  rdf:subject sid:User_jdoe .
+
+_:bnode-ftp_jdoe-JohnDoe a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Person_JohnDoe;
+  rdf:predicate core:ownedBy;
+  rdf:subject sid:User_ftp_jdoe .
+
+_:bnode-ftp_admin-JohnDoe a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Person_JohnDoe;
+  rdf:predicate core:ownedBy;
+  rdf:subject sid:User_ftp_admin .
+
+_:bnode-jhalley-JaneHalley a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Person_JaneHalley;
+  rdf:predicate core:ownedBy;
+  rdf:subject sid:User_jhalley .
+
+_:bnode-ftp_jhalley-JaneHalley a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Person_JaneHalley;
+  rdf:predicate core:ownedBy;
+  rdf:subject sid:User_ftp_jhalley .
+
+_:bnode-akep-AnnaKep a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Person_AnnaKep;
+  rdf:predicate core:ownedBy;
+  rdf:subject sid:User_akep .
+
+_:bnode-ftp_akep-AnnaKep a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Person_AnnaKep;
+  rdf:predicate core:ownedBy;
+  rdf:subject sid:User_ftp_akep .
+
+_:bnode-jdoe-Client01 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Client01;
+  rdf:predicate core:onDevice;
+  rdf:subject sid:User_jdoe .
+
+_:bnode-ftp_jdoe-Server a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Server;
+  rdf:predicate core:onDevice;
+  rdf:subject sid:User_ftp_jdoe .
+
+_:bnode-ftp_admin-Server a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Server;
+  rdf:predicate core:onDevice;
+  rdf:subject sid:User_ftp_admin .
+
+_:bnode-jhalley-Client02 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Client02;
+  rdf:predicate core:onDevice;
+  rdf:subject sid:User_jhalley .
+
+_:bnode-ftp_jhalley-Server a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Server;
+  rdf:predicate core:onDevice;
+  rdf:subject sid:User_ftp_jhalley .
+
+_:bnode-akep-Client03 a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Client03;
+  rdf:predicate core:onDevice;
+  rdf:subject sid:User_akep .
+
+_:bnode-ftp_akep-Server a rdf:Statement;
+  core:validFrom "2020-03-08T00:00:00"^^xsd:dateTime;
+  core:validUntil "2020-03-14T23:59:00"^^xsd:dateTime;
+  rdf:object sid:Device_Server;
+  rdf:predicate core:onDevice;
+  rdf:subject sid:User_ftp_akep .
