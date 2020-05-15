@@ -1,0 +1,82 @@
+@prefix carml:  <http://carml.taxonic.com/carml/> .
+@prefix rr:     <http://www.w3.org/ns/r2rml#> .
+@prefix rml:    <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql:     <http://semweb.mmlab.be/ns/ql#> .
+@prefix fno:    <http://semweb.datasciencelab.be/ns/function#> .
+@prefix fnml:   <http://semweb.mmlab.be/ns/fnml#> .
+@prefix func:   <http://cityspin.net/ns/function/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@prefix core:   <http://w3id.org/sepses/vocab/log/core#> .
+@prefix sid:    <http://w3id.org/sepses/id/slogert/> .
+
+
+<#person>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "http://w3id.org/sepses/id/slogert/Person_{person}";
+        rr:class foaf:Person ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:template "{label}";
+            rr:datatype xsd:string
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:hasDevice ;
+        rr:objectMap [
+             rr:template "http://w3id.org/sepses/id/slogert/Device_{device}";
+             rr:class core:Device ;
+        ];
+    ];
+.
+
+<#person-device>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "{person}-{device}";
+        rr:termType rr:BlankNode ;
+        rr:class rdf:Statement ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/id/slogert/Person_{person}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/vocab/log/core#hasDevice";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rr:objectMap [
+             rr:template "http://w3id.org/sepses/id/slogert/Device_{device}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validFrom ;
+        rr:objectMap [
+            rml:reference "validFrom";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validUntil;
+        rr:objectMap [
+            rml:reference "validUntil";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+.

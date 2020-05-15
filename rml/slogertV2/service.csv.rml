@@ -1,0 +1,133 @@
+@prefix carml:  <http://carml.taxonic.com/carml/> .
+@prefix rr:     <http://www.w3.org/ns/r2rml#> .
+@prefix rml:    <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql:     <http://semweb.mmlab.be/ns/ql#> .
+@prefix fno:    <http://semweb.datasciencelab.be/ns/function#> .
+@prefix fnml:   <http://semweb.mmlab.be/ns/fnml#> .
+@prefix func:   <http://cityspin.net/ns/function/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@prefix core:   <http://w3id.org/sepses/vocab/log/core#> .
+@prefix sid:    <http://w3id.org/sepses/id/slogert/> .
+
+
+<#service>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "http://w3id.org/sepses/id/slogert/Service_{service}";
+        rr:class core:Service ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:template "{service}";
+            rr:datatype xsd:string
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:hasPort ;
+        rr:objectMap [
+             rr:template "http://w3id.org/sepses/id/slogert/Port_{port}";
+             rr:class core:Port ;
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:onDevice ;
+        rr:objectMap [
+             rr:template "http://w3id.org/sepses/id/slogert/Device_{device}";
+             rr:class foaf:Device ;
+        ];
+    ];
+.
+
+<#service-port>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "{service}-{port}";
+        rr:termType rr:BlankNode ;
+        rr:class rdf:Statement ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/id/slogert/Service_{service}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/vocab/log/core#hasPort";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rr:objectMap [
+             rr:template "http://w3id.org/sepses/id/slogert/Port_{port}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validFrom ;
+        rr:objectMap [
+            rml:reference "validFrom";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validUntil;
+        rr:objectMap [
+            rml:reference "validUntil";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+.
+
+<#service-device>
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:CSV;
+    ];
+    rr:subjectMap [
+        rr:template "{service}-{device}";
+        rr:termType rr:BlankNode ;
+        rr:class rdf:Statement ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/id/slogert/Service_{service}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rr:objectMap [
+            rr:template "http://w3id.org/sepses/vocab/log/core#onDevice";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rr:objectMap [
+             rr:template "http://w3id.org/sepses/id/slogert/Device_{device}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validFrom ;
+        rr:objectMap [
+            rml:reference "validFrom";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate core:validUntil;
+        rr:objectMap [
+            rml:reference "validUntil";
+            rr:datatype xsd:dateTime
+        ];
+    ];
+.
