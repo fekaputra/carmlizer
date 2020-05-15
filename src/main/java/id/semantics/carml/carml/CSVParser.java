@@ -40,9 +40,10 @@ public class CSVParser {
         // write it out to an turtle file
         Model sesameModel = mapper.map(mapping);
 
-        sesameModel.setNamespace("core", "http://w3id.org/sepses/log/core#");
-        sesameModel.setNamespace("ex", "http://w3id.org/sepses/slogert/");
+        sesameModel.setNamespace("core", "http://w3id.org/sepses/vocab/log/core#");
+        sesameModel.setNamespace("sid", "http://w3id.org/sepses/id/slogert/");
         sesameModel.setNamespace("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
+        sesameModel.setNamespace("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
         sesameModel.setNamespace("xsd", "http://www.w3.org/2001/XMLSchema#");
         sesameModel.setNamespace("owl", "http://www.w3.org/2002/07/owl#");
         sesameModel.setNamespace("foaf", "http://xmlns.com/foaf/0.1/");

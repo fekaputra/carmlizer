@@ -3,11 +3,16 @@ package id.semantics.carml;
 import id.semantics.carml.carml.CSVParser;
 import id.semantics.carml.carml.JSONParser;
 import id.semantics.carml.carml.XMLParser;
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.riot.Lang;
+import org.apache.jena.riot.RDFDataMgr;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import se.liu.ida.rdfstar.tools.conversion.RDF2RDFStar;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -17,35 +22,53 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        String inputFile = "./input/slogert/account.csv";
-        String outputFile = "./output/slogert-account.ttl";
-        String rmlFile = "./rml/slogert/account.csv.rml";
+        String finalFile = "./output/slogert-bkg.ttl";
+        Model model = ModelFactory.createDefaultModel();
+
+        String inputFile = "./input/slogertV2/user.csv";
+        String outputFile = "./output/slogert-user.ttl";
+        String rmlFile = "./rml/slogertV2/user.csv.rml";
         String rmlType = "csv";
         executeConversion(inputFile, rmlType, rmlFile, outputFile);
+        RDFDataMgr.read(model, new FileInputStream(outputFile), Lang.TURTLE);
 
-        inputFile = "./input/slogert/client.csv";
-        outputFile = "./output/slogert-client.ttl";
-        rmlFile = "./rml/slogert/client.csv.rml";
-        rmlType = "csv";
-        executeConversion(inputFile, rmlType, rmlFile, outputFile);
-
-        inputFile = "./input/slogert/network.csv";
+        inputFile = "./input/slogertV2/network.csv";
         outputFile = "./output/slogert-network.ttl";
-        rmlFile = "./rml/slogert/network.csv.rml";
+        rmlFile = "./rml/slogertV2/network.csv.rml";
         rmlType = "csv";
         executeConversion(inputFile, rmlType, rmlFile, outputFile);
+        RDFDataMgr.read(model, new FileInputStream(outputFile), Lang.TURTLE);
 
-        inputFile = "./input/slogert/person.csv";
-        outputFile = "./output/slogert-person.ttl";
-        rmlFile = "./rml/slogert/person.csv.rml";
+        inputFile = "./input/slogertV2/device.csv";
+        outputFile = "./output/slogert-device.ttl";
+        rmlFile = "./rml/slogertV2/device.csv.rml";
         rmlType = "csv";
         executeConversion(inputFile, rmlType, rmlFile, outputFile);
+        RDFDataMgr.read(model, new FileInputStream(outputFile), Lang.TURTLE);
 
-        inputFile = "./input/slogert/service.csv";
+        inputFile = "./input/slogertV2/service.csv";
         outputFile = "./output/slogert-service.ttl";
-        rmlFile = "./rml/slogert/service.csv.rml";
+        rmlFile = "./rml/slogertV2/service.csv.rml";
         rmlType = "csv";
         executeConversion(inputFile, rmlType, rmlFile, outputFile);
+        RDFDataMgr.read(model, new FileInputStream(outputFile), Lang.TURTLE);
+
+        inputFile = "./input/slogertV2/person.csv";
+        outputFile = "./output/slogert-person.ttl";
+        rmlFile = "./rml/slogertV2/person.csv.rml";
+        rmlType = "csv";
+        executeConversion(inputFile, rmlType, rmlFile, outputFile);
+        RDFDataMgr.read(model, new FileInputStream(outputFile), Lang.TURTLE);
+
+        RDFDataMgr.write(new FileOutputStream(finalFile), model, Lang.TURTLE);
+        model.close();
+
+
+        // transform to RDF*
+        RDF2RDFStar rdf2RDFStar = new RDF2RDFStar();
+        rdf2RDFStar.convert(finalFile, new FileOutputStream(finalFile + "s"));
+
+
 
     }
 
@@ -57,10 +80,6 @@ public class Main {
         long start = System.currentTimeMillis();
 
         conversion(inputFile, rmlType, rmlFile, outputFile);
-
-        // transform to RDF*
-        RDF2RDFStar rdf2RDFStar = new RDF2RDFStar();
-        rdf2RDFStar.convert(outputFile, new FileOutputStream(outputFile + "star.ttl"));
 
         log.info("Main process is done in '" + (System.currentTimeMillis() - start) / 1000 + "' seconds");
     }
