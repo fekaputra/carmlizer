@@ -1,0 +1,25 @@
+{
+  "query_id": "bc9cd967-eeaf-4b43-a1fe-8389f1a5f780",
+  "results": [
+    "1", "7", "12", "17"
+  ],
+  "data": {
+    "consent": {
+      "description": "Some description",
+      "until": "2022-05-26",
+      "processing": "aggregate",
+      "purpose": "commercial"
+    },
+    "attributes": "Gender,BirthDate,Country,FastingBloodGlucose,VitaminB12",
+    "user": {
+      "user_id": "c09576e2-d455-4167-a220-096121b58f37",
+      "organization": "TUWien"
+    }
+  },
+  "submitted_at": "2020-12-13T12:06:30.488079",
+  "triggered_by": "utils.py:20",
+  "execution": {
+    "start": "2020-12-13T12:06:30.244719",
+    "end": "2020-12-13T12:06:30.834846"
+  }
+}

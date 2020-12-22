@@ -19,10 +19,10 @@ public class Main {
 
         long start = System.currentTimeMillis();
 
-        String inputFile = "./input/weather.csv";
-        String outputFile = "./output/weather.ttl";
-        String rmlFile = "./rml/weather.rml.ttl";
-        String rmlType = "csv";
+        String inputFile = "./input/query.json";
+        String outputFile = "./output/split-value.ttl";
+        String rmlFile = "./rml/split-value.rml";
+        String rmlType = "json";
 
         // start carmlizer
         conversion(inputFile, rmlType, rmlFile, outputFile);

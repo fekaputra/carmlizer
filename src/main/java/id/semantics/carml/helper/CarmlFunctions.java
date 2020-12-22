@@ -8,6 +8,9 @@ import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class CarmlFunctions {
 
@@ -49,6 +52,35 @@ public class CarmlFunctions {
         }
 
         return dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"));
+    }
+
+    /**
+     * Split by comma -> values
+     *
+     * @param data
+     *
+     * @return list of string values
+     */
+    @FnoFunction(FUNCTION_NS + "split") public List<String> split(@FnoParam(PARAM_NS + "data") String data) {
+        return Arrays.asList(data.split("\\s*,\\s*"));
+    }
+
+    /**
+     * Split by comma -> URLs
+     *
+     * @param data
+     * @param ns
+     *
+     * @return list of string URLs
+     */
+    @FnoFunction(FUNCTION_NS + "splitToURL")
+    public List<String> splitToURL(
+            @FnoParam(PARAM_NS + "data") String data,
+            @FnoParam(PARAM_NS + "ns") String ns) {
+        List<String> values = Arrays.asList(data.split("\\s*,\\s*"));
+        values = values.stream().map(value -> ns + value).collect(Collectors.toList());
+
+        return values;
     }
 
 }

@@ -1,0 +1,75 @@
+@prefix func:   <http://semantics.id/ns/function#> .
+@prefix param:  <http://semantics.id/ns/parameter#> .
+@prefix fnml:   <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno:    <http://semweb.datasciencelab.be/ns/function#> .
+@prefix rr:     <http://www.w3.org/ns/r2rml#> .
+@prefix rml:    <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql:     <http://semweb.mmlab.be/ns/ql#> .
+@prefix carml:  <http://carml.taxonic.com/carml/> .
+
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@prefix id:     <http://w3id.org/wellfort/id/> .
+@prefix :       <http://w3id.org/wellfort/ns/prov#> .
+
+<#query> a rr:TriplesMap ;
+    rml:logicalSource [
+        rml:source [ a carml:Stream; ];
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$" ;
+    ];
+    rr:subjectMap [
+        rr:template "http://w3id.org/wellfort/id/query-{query_id}";
+        rr:class :Query, prov:Activity
+    ];
+    rr:predicateObjectMap [
+        rr:predicate :splitValue ;
+        rr:objectMap [
+            # Name of the function to be executed
+            carml:multiFunctionValue [
+
+                # somehow it needs to be given a name; but I don't think it has an effect
+                rr:subjectMap [ rr:template "functionExec" ];
+
+                # function definition -> mapped to the func:split function defined in the CarmlFunctions.Java
+                rr:predicateObjectMap [
+                    rr:predicate fno:executes;
+                    rr:object func:split;
+                ];
+
+                # parameter definition -> mapped to the param:data in the func:split function
+                rr:predicateObjectMap [
+                    rr:predicate param:data;
+                    rr:objectMap [ rml:reference "data.attributes" ] ;
+                ];
+            ];
+            # to define what type of data is to be expected (rr:Literal, rr:BlankNode, or rr:IRI)
+            rr:termType rr:Literal ;
+        ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate :splitToURL ;
+        rr:objectMap [
+            carml:multiFunctionValue [
+                rr:subjectMap [ rr:template "functionExec" ];
+                rr:predicateObjectMap [
+                    rr:predicate fno:executes;
+                    rr:object func:splitToURL;
+                ];
+                rr:predicateObjectMap [
+                    rr:predicate param:data;
+                    rr:objectMap [ rml:reference "data.attributes" ] ;
+                ];
+                rr:predicateObjectMap [
+                    rr:predicate param:ns;
+                    rr:objectMap [ rr:constant "http://w3id.org/wellfort/id/" ] ;
+                ];
+            ];
+            rr:termType rr:IRI ;
+        ];
+    ];
+.
